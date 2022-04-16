@@ -31,7 +31,7 @@
             
             <div class="contact-container container-block">
                 <ul class="list-unstyled contact-list">
-                    <li class="email"><i class="fas fa-envelope"></i><a href="mailto: me@yeekaros.net">me@yeekaros.net</a></li>
+                    <li class="email" style="font-size: 13px;"><i class="fas fa-envelope"></i><a href="mailto: tom19960222@gmail.com">tom19960222@gmail.com</a></li>
                     <li class="phone"><i class="fas fa-phone"></i><a href="tel:+886-971-871-022">+886-971-871-022</a></li>
                     <li class="website"><i class="fas fa-globe"></i><a href="https://www.yeekaros.net" target="_blank">www.yeekaros.net</a></li>
                     <li class="github" style="font-size: 13px;"><i class="fab fa-github"></i><a href="https://github.com/tom19960222" target="_blank">github.com/tom19960222</a></li>
@@ -102,20 +102,34 @@
                         <p>負責以下專案：</p>
                         <ul>
                             <li>
-                                慢點付 Paylater (後端服務設計與開發)
+                                慢點付 Paylater (系統架構設計與後端服務開發)
                                 <ul>
                                     <li>是一個先買後付 (BNPL) 的支付平台，消費者只要提供身分證與個人基本資料，透過自行開發的信用評分系統，只需幾秒鐘審核就可取得消費額度</li>
                                     <li>導入微服務架構，讓支付服務可以快速擴展，不需要在容量不足時擴展整套系統</li>
                                     <li>支付 API 規格相容 Line Pay，讓已經串接 Line Pay 的商家可以快速串接 Paylater</li>
-                                    <li>與彰化銀行和中國信託串接 ATM 和超商繳款，提供消費者繳交帳單服務</li>
-                                    <li></li>
+                                    <li>與兩家銀行串接 ATM 和超商繳款，提供消費者繳交帳單服務</li>
+                                    <li>信用評分系統串接政府各種查詢資料 API，並綜合上千萬筆法律相關資料建構出的評分模型，可在數秒內決定要給予消費者多少額度</li>
+                                    <li>導入 TypeScript 、自行開發的程式範本與 Linter，讓初級工程師可以快速上手為專案貢獻程式碼</li>
+                                    <li>利用 Grafana 與 Redash 建構非技術人員也可簡單了解各種商業指標的 dashboard，同時也被用來抓出有問題的交易</li>
                                 </ul>
                             </li>
                             <li>
-                                電話訪問系統
+                                電話訪問系統 (系統架構設計與後端開發)
+                                <ul>
+                                    <li>為一多功能的雲端總機系統，基於 Asterisk 進行開發，包含名單自動撥號、來電佇列、大量簡訊發送、回撥、多層可客製化的權限等功能</li>
+                                    <li>全套系統架設於 GCP 台灣機房，並直連遠傳 SIP Trunk，提供最低的延遲</li>
+                                    <li>提供話機與 App 兩種使用方式，讓人員在公司內外皆可使用</li>
+                                    <li>架設 SIP Router 讓多間公司可以共用同一個號碼池</li>
+                                </ul>
                             </li>
                             <li>
-                                機房建置
+                                挖礦機房建置 (協助進行規劃)
+                                <ul>
+                                    <li>協助規劃兩個乙太幣挖礦機房建置，兩者加起來有超過 40 台礦機與超過 150 張 NVidia GTX 3070/3080 顯示卡</li>
+                                    <li>規劃機房網路架構，利用 GRE Tunnel 與辦公室內網串聯，並利用 OSPF 協定交換路由，讓機房的資料可以直接回傳公司</li>
+                                    <li>協助進行電力與冷氣容量估算與驗算，電力使用超過 50kW，同時提供 55kW 以上的冷房能力</li>
+                                    <li>使用 NodeMCU 搭配 DHT22 溫濕度感測器建立 IoT 環境監控，並搭配 Prometheus + Alertmanager 在溫度異常時自動告警</li>
+                                </ul>
                             </li>
                         </ul>
                     </div><!--//details-->
@@ -248,6 +262,31 @@
                 </div>  
             </section><!--//skills-section-->
             
+            <section class="section experiences-section">
+                <h2 class="section-title"><span class="icon-holder"><i class="fas fa-briefcase"></i></span>學歷</h2>
+                <div class="item">
+                    <div class="meta">
+                        <div class="upper-row">
+                            <h3 class="job-title">淡江大學</h3>
+                            <div class="time">2014 - 2021</div>
+                        </div><!--//upper-row-->
+                        <div class="company">資訊工程系學士</div>
+                    </div><!--//meta-->
+                    <div class="details">
+                        <p>將舊有的官方網站與行程訂購網站翻新，開發新系統並導入 AWS 與 CI/CD 流程</p>  
+                        <ul>
+                            <li>主導將舊有 server side rendering 的 jQuery + Django 架構漸進轉移到新的前後端分離 Angular + Node.js 架構，轉換中新舊兩個版本的後端同時運作且無資料不同步的問題</li>
+                            <li>將後端從舊有的 Heroku 平台轉換至 AWS，並改以 Docker + ECS 進行部署</li>
+                            <li>新架構串接 PayPal 與綠界金流，讓顧客在網站上下單完即可馬上付款</li>
+                            <li>轉換至新架構時將業務邏輯完全重新梳理，讓訂單流程減少了 1/3 的步驟，同時減少了一半的訂單狀態</li>
+                            <li>使用 AWS CodePipeline 與 CodeBuild 導入 CI/CD 流程，從 commit, build 到 deploy 一氣呵成</li>
+                            <li>使用 AWS S3 + Cloudfront 部署舊有台北市立導遊協會網站，並協助使用 EC2 + PHP 7 + Wordpress 建置新版網站</li>
+                        </ul>
+                    </div><!--//details-->
+                </div><!--//item-->
+                
+            </section><!--//section-->
+
         </div><!--//main-body-->
     </div>
  
