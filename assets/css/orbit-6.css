@@ -82,6 +82,7 @@ p {
 }
 .sidebar-wrapper .profile {
   margin-bottom: 15px;
+  border-radius: 100%;
 }
 .sidebar-wrapper .contact-list .svg-inline--fa {
   margin-right: 5px;
