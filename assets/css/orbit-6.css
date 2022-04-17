@@ -258,13 +258,13 @@ p {
 }
 
 .skill-item {
-  background: #4b6977;
-  border-radius: 1em;
+  background: #6c787e;
+  border-radius: 0.25em;
   padding: 0.4em 0.7em;
   color: white;
   font-weight: 500;
-  margin: 0 0.1em;
-  display: inline;
+  margin: 0.15em 0.025em;
+  display: inline-block;
 }
 
 .footer {
