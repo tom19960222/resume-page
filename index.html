@@ -57,14 +57,14 @@
                 <div class="summary">
                     <p>興趣使然的開發者，對各種系統背後的黑盒子充滿著好奇心</p>
                     <ul>
-                        <li>Web 後端開發 (熟悉 Node.js / Python，略懂 .NET core / Golang)</li>
+                        <li>Web 後端開發 (熟悉 Node.js / Python，略懂 .NET core / Golang / PHP)</li>
                         <li>Web 前端開發 (Vue.js)</li>
                         <li>伺服器與應用程式管理
                             <ul>
                                 <li>使用 Proxmox VE / VMWare ESXi 建立虛擬化叢集</li>
                                 <li>Linux VM 建立與維護，使用 Ubuntu / Debian / CentOS / Alpine Linux</li>
                                 <li>Docker 容器管理，使用 Docker Compose 與 AWS ECS</li>
-                                <li>將舊有 VM 佈署系統遷移至 Docker 佈署</li>
+                                <li>將舊有 VM 佈署的應用程式遷移至 Docker 佈署</li>
                                 <li>DevOps CI/CD pipeline 建立與維護，使用 Drone, Gitlab CI 與 Jenkins</li>
                                 <li>使用 ELK 和 Grafana Labs 系列開源軟體進行伺服器監控</li>
                                 <li>針對沒有現成 Prometheus exporter 的設備自行開發監控程式</li>
@@ -106,16 +106,18 @@
                         </p>
                         <p>
                             在 2023 年 5 月時，為了解決系統的技術債，同時擴充系統容量以應付雙 11 的大量交易，我們決定於 7 月展開上雲計畫，最後於 10 月中成功上線，遷移期間交易不中斷，讓對消費者與合作廠商的影響降到最小。 <br />
-                            此計畫主要難點在前人留下的文件甚少，因此除了盤點所有網路設定的設定以外，應用程式環境也是參考線上環境從零重建而成，同時將環境從傳統的 x86 架構轉換到 ARM 架構，可以節省 20-25% 的虛擬機成本。
+                            此計畫主要難點在前人留下的文件甚少，因此除了盤點所有網路設備設定以外，應用程式環境也是參考線上環境從零重建而成，同時將環境從傳統的 x86 架構轉換到 ARM 架構，可以節省 20-25% 的運算成本。
                         </p>
                         <p>負責以下專案：</p>
                         <ul>
                             <li>
                                 Pi 錢包上雲
                                 <ul>
-                                    <li>
-
-                                    </li>
+                                    <li>盤點系統架構，所有對外 API 入口與內部系統 API 端點，釐清資料流</li>
+                                    <li>在沒有 deployment guide 的前提重建系統環境，通過研究原有正式環境虛擬機從零編寫可以在 ARM 架構上執行的 Dockerfile，重新 compile 所有 PHP extension，並將佈署方式從 Apache 轉為效率更好的 Nginx + php-fpm</li>
+                                    <li>使用 Oracle Data Pump 與 AWS Database Migration Service 將資料庫從實體機遷移至 AWS Relational Database Service (RDS)，不只執行單次匯入，也持續同步後續變更資料</li>
+                                    <li>使用 AWS site to site VPN 搭配 Fortigate 打通原先在 IDC 的內網與 AWS VPC，並導入 OSPF 與 BGP 讓機器自動交換路由，減少要逐台機器設定的麻煩</li>
+                                    <li>協助進行從 AWS site to site VPN 遷移至 AWS Direct Connect 的規劃與可行性實驗</li>
                                 </ul>
                             </li>
                             <li>
