@@ -57,15 +57,18 @@
                 <div class="summary">
                     <p>興趣使然的開發者，對各種系統背後的黑盒子充滿著好奇心</p>
                     <ul>
-                        <li>Web 後端開發 (Node.js / Python)</li>
+                        <li>Web 後端開發 (熟悉 Node.js / Python，略懂 .NET core / Golang)</li>
                         <li>Web 前端開發 (Vue.js)</li>
                         <li>伺服器與應用程式管理
                             <ul>
-                                <li>使用 Proxmox VE 建立虛擬化叢集</li>
-                                <li>Linux 建立與維護</li>
-                                <li>Docker 容器管理</li>
-                                <li>DevOps CI/CD pipeline 建立與維護</li>
+                                <li>使用 Proxmox VE / VMWare ESXi 建立虛擬化叢集</li>
+                                <li>Linux VM 建立與維護，使用 Ubuntu / Debian / CentOS / Alpine Linux</li>
+                                <li>Docker 容器管理，使用 Docker Compose 與 AWS ECS</li>
+                                <li>將舊有 VM 佈署系統遷移至 Docker 佈署</li>
+                                <li>DevOps CI/CD pipeline 建立與維護，使用 Drone, Gitlab CI 與 Jenkins</li>
                                 <li>使用 ELK 和 Grafana Labs 系列開源軟體進行伺服器監控</li>
+                                <li>針對沒有現成 Prometheus exporter 的設備自行開發監控程式</li>
+                                <li>使用 CDN 與 WAF 服務阻擋惡意攻擊，使用 Imperva 與 AWS Cloudfront + WAF</li>
                             </ul>
                         </li>
                         <li>
@@ -98,13 +101,39 @@
                         <div class="company">拍付國際資訊股份有限公司</div>
                     </div><!--//meta-->
                     <div class="details">
-                        <p></p>
+                        <p>
+                            帶領 MIS 同仁們盤點沒有留下文件的網路架構，協助日常網路設備與伺服器維護，並主導 Pi 拍錢包上雲計畫的技術規劃
+                        </p>
+                        <p>
+                            在 2023 年 5 月時，為了解決系統的技術債，同時擴充系統容量以應付雙 11 的大量交易，我們決定於 7 月展開上雲計畫，最後於 10 月中成功上線，遷移期間交易不中斷，讓對消費者與合作廠商的影響降到最小。 <br />
+                            此計畫主要難點在前人留下的文件甚少，因此除了盤點所有網路設定的設定以外，應用程式環境也是參考線上環境從零重建而成，同時將環境從傳統的 x86 架構轉換到 ARM 架構，可以節省 20-25% 的虛擬機成本。
+                        </p>
                         <p>負責以下專案：</p>
                         <ul>
                             <li>
                                 Pi 錢包上雲
                                 <ul>
-                                    <li>是一個先買後付 (BNPL) 的支付平台，消費者只要提供身分證與個人基本資料，透過自行開發的信用評分系統，只需幾秒鐘審核就可取得消費額度</li>
+                                    <li>
+
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                網路設備與伺服器維護
+                                <ul>
+                                    <li>
+                                        盤點網路架構，並協助日常設定修改。 <br />
+                                        使用設備包含：
+                                        <ul>
+                                            <li>Cisco 2960/3560/3850 series switch (Cisco IOS)</li>
+                                            <li>Cisco N3K series switch (NX-OS)</li>
+                                            <li>Citrix ADC load balancer</li>
+                                            <li>Fortigate firewall</li>
+                                            <li>CheckPoint firewall</li>
+                                            <li>A10 Thunder ADC load balancer</li>
+                                        </ul>
+                                    </li>
+                                    <li>協助維護 HP / Dell / Supermicro 伺服器，使用 VMWare ESXi 做為 VM Host，使用 vCenter 管理叢集</li>
                                 </ul>
                             </li>
                         </ul>
