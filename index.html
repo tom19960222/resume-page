@@ -115,8 +115,8 @@
                                 <ul>
                                     <li>盤點原有地端系統與網路架構，網路層包含線路盤點、子網路切分、VLAN、路由規則、防火牆規則、load balancer 設定、CDN 設定。<br />
                                         應用層包含所有對外 API 入口與內部系統 API 端點的依賴關係，釐清資料流向</li>
-                                    <li>在沒有 deployment guide 的前提重建系統環境，通過研究原有正式環境虛擬機從零開始編寫可以在 ARM 架構上執行的 Dockerfile，重新 compile 所有 PHP extension，並將佈署方式從 Apache 轉為效率更好的 Nginx + php-fpm</li>
-                                    <li>使用 AWS Elastic Container Service (ECS) + AWS Elastic Load Balancer (ELB) 從零重新架設所有交易核心服務</li>
+                                    <li>在沒有 deployment guide 的前提重建系統環境並將系統容器化，從零開始編寫可以在 ARM 架構上執行的 Dockerfile，重新 compile 所有 PHP extension，並將佈署方式從 Apache 轉為效率更好的 Nginx + php-fpm</li>
+                                    <li>使用 AWS Elastic Container Service (ECS) 從零重新架設所有交易核心服務</li>
                                     <li>使用 AWS VPC Security Group 與 AWS WAF 將原有的防火牆規則遷移至 AWS</li>
                                     <li>使用 Oracle Data Pump 與 AWS Database Migration Service 將資料庫從實體機遷移至 AWS Relational Database Service (RDS)，不只執行單次匯入，也持續同步後續變更資料</li>
                                     <li>使用 AWS site to site VPN 搭配 Fortigate 打通原先在 IDC 的內網與 AWS VPC，並導入 OSPF 與 BGP 讓機器自動交換路由，減少要逐台機器設定的麻煩</li>
@@ -124,6 +124,8 @@
                                     <li>協助進行從 AWS site to site VPN 遷移至 AWS Direct Connect 的規劃與可行性實驗</li>
                                     <li>部分無法使用 AWS ECS 重新架設的服務使用 AWS Application Migration Service (MGN) 將 VM 整台遷移至 AWS EC2</li>
                                     <li>架設 Prometheus + Grafana 做為系統狀態監控，同時使用自行編寫的 Prometheus exporter 抓取即時交易數據在 Grafana 上呈現，讓一個 dashboard 同時能從系統與業務角度掌握健康狀態。</li>
+                                    <li>使用 AWS Step Functions 與 AWS EventBridge 將排程工作從使用 linux crontab 的單台 VM 遷移至 AWS ECS 使用容器執行，讓運算所需的成本減少達 90% 以上，且更利於掌握執行成功狀況與時間長度，同時讓失敗的任務能夠在 Slack 發出警告或是自動重試。 <br />
+                                    使用 AWS Cloud Development Kit (CDK) 編寫讓 AWS 上的資源也能如程式一般進行版本控制、複製與刪除。</li>
                                 </ul>
                             </li>
                             <li>
