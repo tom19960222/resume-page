@@ -67,7 +67,7 @@
                                 <li>將舊有 VM 佈署的應用程式遷移至 Docker 佈署</li>
                                 <li>DevOps CI/CD pipeline 建立與維護，使用 Drone, Gitlab CI 與 Jenkins</li>
                                 <li>使用 ELK 和 Grafana Labs 系列開源軟體進行伺服器監控</li>
-                                <li>針對沒有現成 Prometheus exporter 的設備自行開發監控程式</li>
+                                <li>使用 Prometheus 監控服務與網路設備健康狀態，針對沒有現成 Prometheus exporter 的設備自行開發監控程式</li>
                                 <li>使用 CDN 與 WAF 服務阻擋惡意攻擊，使用 Imperva 與 AWS Cloudfront + WAF</li>
                             </ul>
                         </li>
@@ -82,6 +82,7 @@
                         </li>
                         <li>網路管理
                             <ul>
+                                <!-- TODO: 這邊加點簡單能力介紹 -->
                                 <li>使用 <a href="https://bgp.he.net/AS38852">AS38852</a> 做 BGP Peering / Transit，並租用兩個 Class C 的 IP 使用</li>
                             </ul>
                         </li>
@@ -113,6 +114,7 @@
                             <li>
                                 Pi 錢包上雲
                                 <ul>
+                                    <!-- 分成 4 個 step 來寫寫看，重建環境、打通地雲端、在雲端架設服務（遷移服務）、監控、遷移排程工作 -->
                                     <li>盤點原有地端系統與網路架構，網路層包含線路盤點、子網路切分、VLAN、路由規則、防火牆規則、load balancer 設定、CDN 設定。<br />
                                         應用層包含所有對外 API 入口與內部系統 API 端點的依賴關係，釐清資料流向</li>
                                     <li>在沒有 deployment guide 的前提重建系統環境並將系統容器化，從零開始編寫可以在 ARM 架構上執行的 Dockerfile，重新 compile 所有 PHP extension，並將佈署方式從 Apache 轉為效率更好的 Nginx + php-fpm</li>
