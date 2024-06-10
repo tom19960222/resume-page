@@ -55,17 +55,23 @@
             <section class="section summary-section">
                 <h2 class="section-title"><span class="icon-holder"><i class="fas fa-user"></i></span>自我介紹</h2>
                 <div class="summary">
-                    <p>興趣使然的開發者，對各種系統背後的黑盒子充滿著好奇心</p>
+                    <p>
+                        對各種系統充滿著好奇心的資深開發者，主攻 Web 後端開發、DevOps 自動化與基礎設施管理。<br />
+                        相信運作良好的系統不只是工程師們的努力，更上一層樓的關鍵是與業務單位的合作無間
+                    </p>
                     <ul>
-                        <li>Web 後端開發 (Node.js / Python)</li>
+                        <li>Web 後端開發 (熟悉 Node.js / Python，略懂 .NET core / Golang / PHP)</li>
                         <li>Web 前端開發 (Vue.js)</li>
                         <li>伺服器與應用程式管理
                             <ul>
-                                <li>使用 Proxmox VE 建立虛擬化叢集</li>
-                                <li>Linux 建立與維護</li>
-                                <li>Docker 容器管理</li>
-                                <li>DevOps CI/CD pipeline 建立與維護</li>
-                                <li>使用 ELK 和 Grafana Labs 系列開源軟體進行伺服器監控</li>
+                                <li>使用 Proxmox VE / VMWare ESXi 建立虛擬化叢集</li>
+                                <li>Linux VM 建立與維護，使用 Ubuntu / Debian / CentOS / Alpine Linux</li>
+                                <li>Docker 容器管理，使用 Docker Compose 與 AWS ECS</li>
+                                <li>將舊有 VM 佈署的應用程式遷移至 Docker 佈署，根據程式需求自行編寫 Dockerfile</li>
+                                <li>DevOps CI/CD pipeline 建立與維護，使用過 Drone, Gitlab CI, Jenkins, Azure DevOps</li>
+                                <li>使用 ELK 和 Grafana Labs 系列開源軟體進行伺服器監控與 log 收集</li>
+                                <li>使用 Prometheus 監控服務與網路設備健康狀態，針對沒有現成 Prometheus exporter 的設備自行開發監控程式</li>
+                                <li>使用 CDN 與 WAF 服務阻擋惡意攻擊，使用 Imperva 與 AWS Cloudfront + WAF</li>
                             </ul>
                         </li>
                         <li>
@@ -79,6 +85,7 @@
                         </li>
                         <li>網路管理
                             <ul>
+                                <!-- TODO: 這邊加點簡單能力介紹 -->
                                 <li>使用 <a href="https://bgp.he.net/AS38852">AS38852</a> 做 BGP Peering / Transit，並租用兩個 Class C 的 IP 使用</li>
                             </ul>
                         </li>
@@ -92,8 +99,99 @@
                 <div class="item">
                     <div class="meta">
                         <div class="upper-row">
+                            <h3 class="job-title">網站可靠性工程師</h3>
+                            <div class="time">May. 2023 - 現在</div>
+                        </div><!--//upper-row-->
+                        <div class="company">拍付國際資訊股份有限公司 (Pi 拍錢包 / PCHomePay 支付連)</div>
+                    </div><!--//meta-->
+                    <div class="details">
+                        <p>
+                            帶領 MIS 同仁們盤點沒有留下文件的網路架構，協助日常網路設備與伺服器維護，並主導 Pi 拍錢包上雲計畫的技術規劃
+                        </p>
+                        <p>
+                            在 2023 年 5 月時，為了解決系統的技術債，同時擴充系統容量以應付雙 11 的大量交易，我們決定於 7 月展開上雲計畫，最後於 10 月中成功上線，遷移期間交易不中斷，讓對消費者與合作廠商的影響降到最小。 <br />
+                            此計畫主要難點在前人留下的文件甚少，因此除了盤點所有網路設備設定以外，應用程式環境也是參考線上環境從零重建而成，同時將環境從傳統的 x86 架構轉換到 ARM 架構，可以節省 20-25% 的運算成本。
+                        </p>
+                        <p>負責以下專案：</p>
+                        <ul>
+                            <li>
+                                <p>Pi 錢包上雲</p>
+                                此專案主要分成四大步驟進行：
+                                <ol>
+                                    <li>重建應用程式部署環境</li>
+                                    <li>盤點現有基礎架構，釐清系統架構</li>
+                                    <li>製作與實行遷移計畫</li>
+                                    <li>監控遷移以後系統狀況</li>
+                                </ol>
+                                <div style="width: 100%; height: 1em;"></div>
+                                <ul>
+                                    <li>
+                                        重建應用程式部署環境
+                                        <ul>
+                                            <li>因前人沒有留下 deployment guide，因此參考正在線上運作的 VM，整理出執行程式所需要的 PHP 版本、資料庫、快取服務等 dependency</li>
+                                            <li>考慮到開發環境以 ARM 架構為主，同時使用 ARM 架構在雲端上可以節省 20 ~ 25% 的運算成本，因此便以前者為基礎從零開始編寫 Dockerfile，重新 compile 所有 PHP extension，並將佈署方式從 Apache 轉為效率更好的 Nginx + php-fpm</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        盤點現有基礎設施，釐清系統架構
+                                        <ul>
+                                            <li>盤點網路架構，包含線路盤點、子網路切分、VLAN、路由規則、防火牆規則、load balancer 設定、CDN 設定。</li>
+                                            <li>盤點應用層所有對外 API 入口與內部系統 API 端點的依賴關係，釐清資料流向</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        製作與實行遷移計畫
+                                        <p>
+                                            與 AWS 的 solution architect 合作，除了 review 架構設計以外，AWS 所提供的 migration plan 樣板規劃步驟，失敗時的 rollback plan 等，在許多細節上提供了非常大的協助。<br />
+                                            技術重點摘要如下：
+                                        </p>
+                                        <ul>
+                                            <li>使用 AWS Elastic Container Service (ECS) 從零重新架設所有交易核心服務</li>
+                                            <li>使用 AWS VPC Security Group 與 AWS WAF 將原有的防火牆規則遷移至 AWS</li>
+                                            <li>使用 Oracle Data Pump 與 AWS Database Migration Service 將資料庫從實體機遷移至 AWS Relational Database Service (RDS)，不只執行單次匯入，也持續同步後續變更資料</li>
+                                            <li>使用 AWS site to site VPN 與 AWS Direct Connect 打通 IDC 的內網與 AWS VPC，並導入 OSPF 與 BGP 讓機器自動交換路由，減少要逐台機器設定的麻煩。也使用 AWS Transit Gateway 讓 VPN 與 Direct Connect 互為備援
+                                            </li>
+                                            <li>部分無法使用 AWS ECS 重新架設的服務使用 AWS Application Migration Service (MGN) 將 VM 整台遷移至 AWS EC2</li>
+                                            <li>使用 AWS Step Functions 與 AWS EventBridge 將排程工作從使用 linux crontab 在 VM 上執行轉為在 ECS Cluster 上執行，讓運算所需的成本減少達 90% 以上，且更利於掌握執行成功狀況與時間長度，同時讓失敗的任務能夠在 Slack 發出警告或是自動重試。<br />
+                                            此部分使用 AWS Cloud Development Kit (CDK) 編寫讓 AWS 上的資源也能如程式一般進行版本控制、複製與刪除。</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        監控遷移以後系統狀況
+                                        <ul>
+                                            <li>架設 Prometheus + Grafana 監控系統，在 Grafana 整合 prometheus / AWS CloudWatch 的監控資料，並在系統異常時發出警告到 Slack 通知 SRE 人員</li>
+                                            <li>自行編寫 Prometheus exporter 抓取如交易數量等業務性質資料，讓一個 Grafana dashboard 同時能從系統與業務角度掌握健康狀態。</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                網路設備與伺服器維護
+                                <ul>
+                                    <li>
+                                        盤點網路架構，並協助日常設定修改。 <br />
+                                        使用設備包含：
+                                        <ul>
+                                            <li>Cisco 2960/3560/3850 series switch (Cisco IOS)</li>
+                                            <li>Cisco N3K series switch (NX-OS)</li>
+                                            <li>Citrix ADC load balancer</li>
+                                            <li>Fortigate firewall</li>
+                                            <li>CheckPoint firewall</li>
+                                            <li>A10 Thunder ADC load balancer</li>
+                                        </ul>
+                                    </li>
+                                    <li>協助維護 HP / Dell / Supermicro 伺服器，使用 VMWare ESXi 做為 VM Host，使用 vCenter 管理叢集</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div><!--//details-->
+                </div><!--//item-->
+
+                <div class="item">
+                    <div class="meta">
+                        <div class="upper-row">
                             <h3 class="job-title">技術長</h3>
-                            <div class="time">Jul. 2019 - 現在</div>
+                            <div class="time">Jul. 2019 - May. 2023 (3yrs 10mos)</div>
                         </div><!--//upper-row-->
                         <div class="company">趣味金融科技有限公司 / 廿一世紀數位科技股份有限公司 / 二十一世紀數位科技股份有限公司</div>
                     </div><!--//meta-->
@@ -175,7 +273,7 @@
                             <h3 class="job-title">後端工程師</h3>
                             <div class="time">Mar. 2017 - Oct. 2018 (1yr 8mos)</div>
                         </div><!--//upper-row-->
-                        <div class="company">MyProGuide</div>
+                        <div class="company">鉑鑉股份有限公司 (MyProGuide)</div>
                     </div><!--//meta-->
                     <div class="details">
                         <p>將舊有的官方網站與行程訂購網站翻新，開發新系統並導入 AWS 與 CI/CD 流程</p>  
