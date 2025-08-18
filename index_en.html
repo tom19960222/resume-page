@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>履歷 - 施俊羽</title>
+    
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="施俊羽的履歷">
+    <meta name="author" content="施俊羽">    
+    <link rel="shortcut icon" href="favicon.ico">  
+    <!-- Google Font -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,400italic,300italic,300,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <!-- FontAwesome JS-->
+	<script defer src="assets/fontawesome/js/all.min.js"></script>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="assets/css/orbit-6.css">
+</head> 
+
+<body>
+    <div class="wrapper mt-lg-5">
+        <div class="sidebar-wrapper">
+            <div class="profile-container">
+                <img class="profile" src="assets/images/profile.png" alt="" />
+                <h1 class="name">Shih Chun Yu</h1>
+                <h3 class="tagline">Tom Shih</h3>
+            </div><!--//profile-container-->
+            
+            <div class="contact-container container-block">
+                <ul class="list-unstyled contact-list">
+                    <li class="email" style="font-size: 13px;"><i class="fas fa-envelope"></i><a href="mailto: tom19960222@gmail.com">tom19960222@gmail.com</a></li>
+                    <li class="phone"><i class="fas fa-phone"></i><a href="tel:+886-971-871-022">+886-971-871-022</a></li>
+                    <li class="website"><i class="fas fa-globe"></i><a href="https://yeekaros.net" target="_blank">yeekaros.net</a></li>
+                    <li class="github" style="font-size: 13px;"><i class="fab fa-github"></i><a href="https://github.com/tom19960222" target="_blank">github.com/tom19960222</a></li>
+                    <li class="twitter"><i class="fab fa-twitter"></i><a href="https://twitter.com/tom19960222" target="_blank">@tom19960222</a></li>
+                </ul>
+            </div><!--//contact-container-->
+            
+            <div class="languages-container container-block">
+                <h2 class="container-block-title">Languages</h2>
+                <ul class="list-unstyled interests-list">
+                    <li>Chinese <span class="lang-desc">(Native)</span></li>
+                    <li>Taiwanese <span class="lang-desc">(Native)</span></li>
+                    <li>English <span class="lang-desc">(Read / Write / Speak)</span></li>
+                    <li>Japanese <span class="lang-desc">(Read / Write / Speak, JLPT N2)</span></li>
+                </ul>
+            </div><!--//interests-->
+        </div><!--//sidebar-wrapper-->
+        
+        <div class="main-wrapper">
+            
+            <section class="section summary-section">
+                <h2 class="section-title"><span class="icon-holder"><i class="fas fa-user"></i></span>自我介紹</h2>
+                <div class="summary">
+                    <p>
+                        對各種系統充滿著好奇心的資深開發者，主攻 Web 後端開發、DevOps 自動化與基礎設施管理。<br />
+                        相信運作良好的系統不只是工程師們的努力，更上一層樓的關鍵是與業務單位的合作無間
+                    </p>
+                    <ul>
+                        <li>Web Backend Development (Node.js / Python)</li>
+                        <li>Web Frontend Development (Vue.js)</li>
+                        <li>伺服器與應用程式管理
+                            <ul>
+                                <li>使用 Proxmox VE / VMWare ESXi 建立虛擬化叢集</li>
+                                <li>Linux VM 建立與維護，使用 Ubuntu / Debian / CentOS / Alpine Linux</li>
+                                <li>Docker 容器管理，使用 Docker Compose 與 AWS ECS</li>
+                                <li>將舊有 VM 佈署的應用程式遷移至 Docker 佈署，根據程式需求自行編寫 Dockerfile</li>
+                                <li>DevOps CI/CD pipeline 建立與維護，使用過 Drone, Gitlab CI, Jenkins, Azure DevOps</li>
+                                <li>使用 ELK 和 Grafana Labs 系列開源軟體進行伺服器監控與 log 收集</li>
+                                <li>使用 Prometheus 監控服務與網路設備健康狀態，針對沒有現成 Prometheus exporter 的設備自行開發監控程式</li>
+                                <li>使用 CDN 與 WAF 服務阻擋惡意攻擊，使用 Imperva 與 AWS Cloudfront + WAF</li>
+                            </ul>
+                        </li>
+                        <li>
+                            雲端服務
+                            <ul>
+                                <li>Amazon Web Services</li>
+                                <li>Google Cloud Platform</li>
+                                <li>Linode</li>
+                                <li>Vultr</li>
+                            </ul>
+                        </li>
+                        <li>網路管理
+                            <ul>
+                                <!-- TODO: 這邊加點簡單能力介紹 -->
+                                <li>使用 <a href="https://bgp.he.net/AS38852">AS38852</a> 做 BGP Peering / Transit，並租用兩個 Class C 的 IP 使用</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div><!--//summary-->
+            </section><!--//section-->
+            
+            <section class="section experiences-section">
+                <h2 class="section-title"><span class="icon-holder"><i class="fas fa-briefcase"></i></span>經歷</h2>
+                
+                <div class="item">
+                    <div class="meta">
+                        <div class="upper-row">
+                            <h3 class="job-title">Site Reliability Engineer</h3>
+                            <div class="time">May. 2023 - Sep. 2024 (1yrs 5mos)</div>
+                        </div><!--//upper-row-->
+                        <div class="company">Pi Mobile Technology Co., Ltd. (Pi Wallet / PCHomePay)</div>
+                    </div><!--//meta-->
+                    <div class="details">
+                        <p>
+                            Led zero-downtime migration of core payments from on-prem VMware to AWS; rebuilt runtime on AWS ECS, ported firewall policy to Security Groups + AWS WAF, and stabilized cutover with staged replication.
+                        </p>
+                        <ul>
+                            <li>
+                                Rebuilt PHP runtime from scratch (Dockerfiles, Nginx + php-fpm) by reverse-engineering live VMs where documentation was missing.
+                            </li>
+                            <li>
+                                Switched workloads to ARM images; lowered compute cost by ~20–25% without performance regressions.
+                            </li>
+                            <li>
+                                Built hybrid connectivity (Direct Connect + site-to-site VPN), routed with OSPF/BGP, added Transit Gateway failover; minimized operational toil by avoiding per-host static routes.
+                            </li>
+                            <li>
+                                Moved cron jobs to Step Functions + EventBridge (on ECS) with retries and Slack alerts; >90% drop in job compute cost and clear auditability.
+                            </li>
+                            <li>
+                                Centralized telemetry (Prometheus + Grafana + CloudWatch) and authored custom exporters for business KPIs so ops and business share one health view.
+                            </li>
+                        </ul>
+                    </div><!--//details-->
+                </div><!--//item-->
+
+                <div class="item">
+                    <div class="meta">
+                        <div class="upper-row">
+                            <h3 class="job-title">Chief Technology Officer</h3>
+                            <div class="time">Jul. 2019 - May. 2023 (3yrs 10mos)</div>
+                        </div><!--//upper-row-->
+                        <div class="company">趣味金融科技有限公司 / 廿一世紀數位科技股份有限公司 / 二十一世紀數位科技股份有限公司</div>
+                    </div><!--//meta-->
+                    <div class="details">
+                        <p>從零開始建立公司的資訊基礎架構，並主導公司內部系統與嘗試性新專案等多項專案開發</p>
+                        <p>在母公司 (廿一世紀數位科技股份有限公司) 被網路家庭國際資訊股份有限公司 (PCHome) 收購與收購喬睿科技股份有限公司 (TapPay) 以後，協助團隊之間的技術合作與團隊整合與協作規劃</p>
+                        <p>負責以下專案：</p>
+                        <ul>
+                            <li>
+                                慢點付 Paylater (系統架構設計與後端服務開發)
+                                <ul>
+                                    <li>是一個先買後付 (BNPL) 的支付平台，消費者只要提供身分證與個人基本資料，透過自行開發的信用評分系統，只需幾秒鐘審核就可取得消費額度</li>
+                                    <li>導入微服務架構，讓支付服務可以獨立快速擴展，不需要在容量不足時擴展整套系統</li>
+                                    <li>支付 API 規格相容 Line Pay，讓已經串接 Line Pay 的商家可以快速串接 Paylater</li>
+                                    <li>與兩家銀行串接 ATM 和超商繳款，提供消費者繳交帳單服務</li>
+                                    <li>信用評分系統串接政府各種查詢資料 API，並綜合上千萬筆法律相關資料建構出的評分模型，可在數秒內決定要給予消費者多少額度</li>
+                                    <li>導入 TypeScript、自行開發的程式範本與 Linter，讓初級工程師可以快速上手為專案貢獻程式碼</li>
+                                    <li>利用 Grafana 與 Redash 建構非技術人員也可簡單了解各種商業指標的 dashboard，同時也被用來抓出有問題的交易</li>
+                                </ul>
+                            </li>
+                            <li>
+                                電話訪問系統 (系統架構設計與後端開發)
+                                <ul>
+                                    <li>為一多功能的雲端總機系統，基於 Asterisk 進行開發，包含名單自動撥號、來電佇列、大量簡訊發送、回撥、多層可客製化的權限等功能</li>
+                                    <li>全套系統架設於 GCP 台灣區，並直接連線至遠傳 SIP Trunk，中間不經過任何地端設備，提供最低的延遲與維護成本</li>
+                                    <li>藉由將總機架設在雲端，不需要 VPN 或昂貴的專線才可串聯不同辦公室之間的話機，實測在 NAT 環境下也可正常運作無虞</li>
+                                    <li>提供話機與 App 兩種使用方式，讓人員在公司內外皆可使用</li>
+                                    <li>架設 Kamailio 讓多台 Asterisk 可以共用同一批號碼撥出與撥入，更可在不同公司和用途之間切換號碼以避免號碼被回報為騷擾電話</li>
+                                </ul>
+                            </li>
+                            <li>
+                                挖礦機房建置 (協助進行規劃)
+                                <ul>
+                                    <li>協助規劃兩個乙太幣挖礦機房建置，兩者加起來有超過 40 台礦機與超過 150 張 NVidia GTX 3070/3080 顯示卡</li>
+                                    <li>規劃機房網路架構，利用 GRE Tunnel 與辦公室內網串聯，並利用 OSPF 協定交換路由，讓機房的資料可以直接回傳公司</li>
+                                    <li>協助進行電力與冷氣容量估算與驗算，電力使用超過 50kW，同時提供 55kW 以上的冷房能力</li>
+                                    <li>使用 NodeMCU 搭配 DHT22 溫濕度感測器建立感測節點，加上 Raspberry Pi 4 執行自行編寫的 Prometheus Exporter 作為主機建立 IoT 環境監控，並搭配 Prometheus + Alertmanager 在溫度異常時自動告警</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div><!--//details-->
+                </div><!--//item-->
+                
+                <div class="item">
+                    <div class="meta">
+                        <div class="upper-row">
+                            <h3 class="job-title">技術領導人, 共同創辦人</h3>
+                            <div class="time">Oct. 2018 - Jun. 2019 (9 mos)</div>
+                        </div><!--//upper-row-->
+                        <div class="company">山英資訊有限公司</div>
+                    </div><!--//meta-->
+                    <div class="details">
+                        <p>提供家庭與辦公室電腦購置維護、網路設備規劃建置、資訊系統外包製作服務</p>
+                        <p>主導下列專案： </p>
+                        <ul>
+                            <li>
+                                線上開店平台
+                                <ul>
+                                    <li>一個簡易的線上開店平台，提供基本的進銷存與下訂單功能，且多間商店可共用同一個後端並套用不同版面</li>
+                                    <li>使用 Vue.js + Node.js 開發，且所有 API 都使用 GraphQL，讓 GraphQL schema 本身即是 API 文件</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="https://www.happyfan7.com/">樂分期</a> 網站維護
+                                <ul>
+                                    <li>使用 Prometheus + Grafana 進行網站上線狀況監控與告警</li>
+                                    <li>使用 Twillio 搭配自行開發的 script 在網站出問題時自動撥打手機通知值班人員進行處理</li>
+                                    <li>協助進行原始碼 Review，抓出系統內數個 SQL injection 漏洞與造成嚴重效能異常的程式</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        
+                    </div><!--//details-->
+                </div><!--//item-->
+
+                <div class="item">
+                    <div class="meta">
+                        <div class="upper-row">
+                            <h3 class="job-title">後端工程師</h3>
+                            <div class="time">Mar. 2017 - Oct. 2018 (1yr 8mos)</div>
+                        </div><!--//upper-row-->
+                        <div class="company">鉑鑉股份有限公司 (MyProGuide)</div>
+                    </div><!--//meta-->
+                    <div class="details">
+                        <p>將舊有的官方網站與行程訂購網站翻新，開發新系統並導入 AWS 與 CI/CD 流程</p>  
+                        <ul>
+                            <li>主導將舊有 server side rendering 的 jQuery + Django 架構漸進轉移到新的前後端分離 Angular + Node.js 架構，轉換中新舊兩個版本的後端同時運作且無資料不同步的問題</li>
+                            <li>將後端從舊有的 Heroku 平台轉換至 AWS，並改以 Docker + ECS 進行部署</li>
+                            <li>新架構串接 PayPal 與綠界金流，讓顧客在網站上下單完即可馬上付款</li>
+                            <li>轉換至新架構時將業務邏輯完全重新梳理，讓訂單流程減少了 1/3 的步驟，同時減少了一半的訂單狀態</li>
+                            <li>使用 AWS CodePipeline 與 CodeBuild 導入 CI/CD 流程，從 commit, build 到 deploy 一氣呵成</li>
+                            <li>使用 AWS S3 + Cloudfront 部署舊有台北市立導遊協會網站，並協助使用 EC2 + PHP 7 + Wordpress 建置新版網站</li>
+                        </ul>
+                    </div><!--//details-->
+                </div><!--//item-->
+                
+            </section><!--//section-->
+            
+            <section class="section skills-section">
+                <h2 class="section-title" style="margin-bottom: 5px;"><span class="icon-holder"><i class="fas fa-tools"></i></span>技術能力</h2>
+
+                <div class="item">
+                    <div class="details">
+                        <span class="skill-item">Node.js</span>
+                        <span class="skill-item">TypeScript</span>
+                        <span class="skill-item">Python</span>
+                        <span class="skill-item">PostgreSQL</span>
+                        <span class="skill-item">MySQL</span>
+                        <span class="skill-item">MacOS</span>
+                        <span class="skill-item">Linux</span>
+                        <span class="skill-item">Docker</span>
+                        <span class="skill-item">Bash</span>
+                        <span class="skill-item">Git</span>
+                        <span class="skill-item">Amazon Web Services</span>
+                        <span class="skill-item">Google Cloud Platform</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section experiences-section">
+                <h2 class="section-title"><span class="icon-holder"><i class="fas fa-university"></i></span>Education</h2>
+                <div class="item">
+                    <div class="meta">
+                        <div class="upper-row">
+                            <h3 class="job-title">Tamkang University</h3>
+                            <div class="time">2014 - 2021</div>
+                        </div><!--//upper-row-->
+                        <div class="company">Department of Computer Science and Information Engineering</div>
+                    </div><!--//meta-->
+                    <div class="details">
+                        <ul>
+                            <li>
+                                Built a container platform giving students root access to run servers, install software, and host web services; scaled to 1,000+ concurrent containers.
+                            </li>
+                            <li>
+                                Implemented self-service provisioning via university email authentication, enabling instant access.
+                            </li>
+                            <li>Designed and maintained overall system architecture and infrastructure.</li>
+                        </ul>
+                    </div><!--//details-->
+                </div><!--//item-->
+                
+            </section><!--//section-->
+
+        </div><!--//main-body-->
+    </div>
+ 
+    <footer class="footer">
+        <div class="text-center">
+            <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+            <small class="copyright">Designed with <i class="fas fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+        </div><!--//container-->
+    </footer><!--//footer-->
+        
+</body>
+</html> 
+
