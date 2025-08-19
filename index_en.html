@@ -1,292 +1,1554 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>履歷 - 施俊羽</title>
-    
-    <!-- Meta -->
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="施俊羽的履歷">
-    <meta name="author" content="施俊羽">    
-    <link rel="shortcut icon" href="favicon.ico">  
-    <!-- Google Font -->
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,400italic,300italic,300,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-    <!-- FontAwesome JS-->
-	<script defer src="assets/fontawesome/js/all.min.js"></script>
-    <!-- Global CSS -->
-    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
-    <!-- Theme CSS -->  
-    <link id="theme-style" rel="stylesheet" href="assets/css/orbit-6.css">
-</head> 
+    <title>SHIH CHUN YU - Resume</title>
+    <link rel="icon" href="https://yeekaros.net/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SHIH CHUN YU - Resume.">
+    <meta name="author" content="Shih Chun Yu">
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="SHIH CHUN YU - Resume">
+    <meta property="og:description" content="SHIH CHUN YU - Resume">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <style>
+        /* --- Custom Base Styles --- */
+         :root {
+            --fg: #111;
+            --muted: #555;
+            --hair: #ddd;
+            --chip-bg: #f1f3f5;
+            --chip-fg: #222;
+            --paper: #fff;
+            --accent: #0b57d0;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html,
+        body {
+            height: 100%
+        }
+
+        body {
+            margin: 0;
+            color: var(--fg);
+            background: #f5f7fa;
+            font: 15px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Noto Sans", sans-serif;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        .page {
+            max-width: 210mm;
+            background: var(--paper);
+            margin: 16px auto;
+            padding: 14mm;
+            box-shadow: 0 6px 28px rgba(0, 0, 0, .08);
+        }
+
+        header {
+            display: flex;
+            gap: 16px;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 18px
+        }
+
+        h1 {
+            font-size: 28px;
+            margin: 0 0 4px
+        }
+
+        h2 {
+            font-size: 18px;
+            border-bottom: 2px solid var(--hair);
+            padding-bottom: 6px;
+            margin: 18px 0 12px
+        }
+
+        h3 {
+            font-size: 16px;
+            margin: 0
+        }
+
+        .aka {
+            color: var(--muted);
+            font-weight: 600
+        }
+
+        .subtitle {
+            color: var(--muted);
+            margin: 6px 0 0
+        }
+
+        .lead {
+            color: var(--muted);
+            margin: 2px 0 0
+        }
+
+        .contacts {
+            font-size: 14px;
+            color: var(--muted);
+            margin-top: 4px
+        }
+
+        .contacts a {
+            color: inherit;
+            text-decoration: none
+        }
+
+        .contacts a:hover {
+            color: var(--accent);
+            text-decoration: underline
+        }
+
+        .contacts .row {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            flex-wrap: wrap
+        }
+
+        .contacts .row span:not(:last-child)::after {
+            content: "·";
+            margin: 0 6px;
+            color: #bbb
+        }
+
+        .section {
+            margin-top: 18px
+        }
+
+        .item {
+            margin: 12px 0
+        }
+
+        .item-head {
+            display: flex;
+            gap: 12px;
+            align-items: baseline;
+            justify-content: space-between;
+            flex-wrap: wrap
+        }
+
+        .period {
+            color: var(--muted);
+            font-size: 14px
+        }
+
+        .meta {
+            display: flex;
+            gap: 6px;
+            align-items: baseline;
+            flex-wrap: wrap;
+            margin: 4px 0
+        }
+
+        .company {
+            font-weight: 600;
+            color: #1f2937
+        }
+
+        .blurb {
+            color: var(--muted);
+            font-size: 12px
+        }
+
+        .bullets {
+            margin: 6px 0 0 18px
+        }
+
+        .bullets li {
+            margin: 4px 0
+        }
+
+        .chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 6px
+        }
+
+        .chip {
+            background: var(--chip-bg);
+            color: var(--chip-fg);
+            font-size: 12px;
+            padding: 2px 8px;
+            border-radius: 999px;
+            border: 1px solid #e6e8eb
+        }
+
+        .proj {
+            margin: 10px 0
+        }
+
+        .proj p {
+            margin: 6px 0;
+            color: #374151
+        }
+
+        code,
+        kbd {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+            font-size: 90%;
+            background: #f6f8fa;
+            padding: 1px 4px;
+            border: 1px solid #e5e7eb;
+            border-radius: 4px
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 14px
+        }
+
+        @media(min-width:820px) {
+            .grid-2 {
+                grid-template-columns: 1fr 1fr
+            }
+        }
+
+        .skill-block {
+            margin: 6px 0
+        }
+
+        .skill-block h4 {
+            margin: 0 0 6px;
+            font-size: 14px
+        }
+
+        .lang-badges,
+        .skill-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px
+        }
+
+        .lang-badges .chip,
+        .skill-chips .chip {
+            font-size: 13px
+        }
+
+        .community .item-head {
+            align-items: center
+        }
+
+        .community .when {
+            color: var(--muted);
+            font-size: 13px
+        }
+
+        @media print {
+            body {
+                background: var(--paper)
+            }
+            .page {
+                box-shadow: none;
+                margin: 0;
+                padding: 10mm
+            }
+            a {
+                color: inherit;
+                text-decoration: none
+            }
+            .chip {
+                border-color: #ddd;
+                background: #f3f4f6
+            }
+            .break {
+                break-before: page
+            }
+        }
+
+        /* --- Resume Page Component Styles --- */
+        .resume-page {
+            font-family: Noto Sans Mono, monospace;
+            font-size: 12px;
+            line-height: 1.5;
+            background-color: #f3f4f6
+        }
+
+        .resume-page h1 {
+            font-size: 1.75rem !important
+        }
+
+        .resume-page h2 {
+            font-size: 1.25rem !important
+        }
+
+        .resume-page h3 {
+            font-size: 1.1rem !important
+        }
+
+        .resume-page .text-sm {
+            font-size: .8125rem !important
+        }
+
+        .resume-page .text-xs {
+            font-size: .75rem !important
+        }
+
+        @media print {
+            @page {
+                size: A4;
+                margin: 6mm
+            }
+            .resume-page {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                background-color: #fff !important
+            }
+            .resume-page .bg-gray-100,
+            .resume-page .bg-gray-200 {
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact
+            }
+            .break-before-page.svelte-12anu1d {
+                -moz-column-break-before: page;
+                break-before: page
+            }
+        }
+
+        .resume-page section {
+            margin-bottom: 1.25rem !important
+        }
+
+        .resume-page .mb-8 {
+            margin-bottom: 1.25rem !important
+        }
+
+        .resume-page .mb-6 {
+            margin-bottom: 1rem !important
+        }
+
+        .resume-page .mb-4 {
+            margin-bottom: .75rem !important
+        }
+
+        .resume-page .mb-3 {
+            margin-bottom: .5rem !important
+        }
+
+        .resume-page .mb-2 {
+            margin-bottom: .375rem !important
+        }
+
+        /* --- Svelte & Animation Styles --- */
+        @keyframes svelte-1wt9ins-gradient {
+            0% {
+                background-position: 0% 50%
+            }
+            50% {
+                background-position: 100% 50%
+            }
+            to {
+                background-position: 0% 50%
+            }
+        }
+
+        .landing-page {
+            margin: 0;
+            min-height: 100vh;
+            background: linear-gradient(-45deg, #1a1a2e, #16213e, #1b2430, #0f172a);
+            background-size: 400% 400%;
+            animation: svelte-1wt9ins-gradient 15s ease infinite
+        }
+
+        .mesh-overlay.svelte-1wt9ins {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, .05) 0px, rgba(255, 255, 255, .05) 2px, transparent 2px, transparent 4px);
+            pointer-events: none;
+            z-index: 0
+        }
+
+        .glass-effect.svelte-1wt9ins {
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            background: #ffffff1a;
+            border: 1px solid rgba(255, 255, 255, .2);
+            position: relative;
+            z-index: 1;
+            transition: transform .2s ease;
+            will-change: transform;
+            transform: translateZ(0)
+        }
+
+        .glass-effect.svelte-1wt9ins:hover {
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            background: #ffffff26
+        }
+
+        .content-container.svelte-1wt9ins {
+            position: relative;
+            z-index: 1
+        }
+
+        /* --- TailwindCSS / Utility Styles --- */
+        *,
+        :before,
+        :after {
+            --tw-border-spacing-x: 0;
+            --tw-border-spacing-y: 0;
+            --tw-translate-x: 0;
+            --tw-translate-y: 0;
+            --tw-rotate: 0;
+            --tw-skew-x: 0;
+            --tw-skew-y: 0;
+            --tw-scale-x: 1;
+            --tw-scale-y: 1;
+            --tw-pan-x:;
+            --tw-pan-y:;
+            --tw-pinch-zoom:;
+            --tw-scroll-snap-strictness: proximity;
+            --tw-gradient-from-position:;
+            --tw-gradient-via-position:;
+            --tw-gradient-to-position:;
+            --tw-ordinal:;
+            --tw-slashed-zero:;
+            --tw-numeric-figure:;
+            --tw-numeric-spacing:;
+            --tw-numeric-fraction:;
+            --tw-ring-inset:;
+            --tw-ring-offset-width: 0px;
+            --tw-ring-offset-color: #fff;
+            --tw-ring-color: rgb(59 130 246 / .5);
+            --tw-ring-offset-shadow: 0 0 #0000;
+            --tw-ring-shadow: 0 0 #0000;
+            --tw-shadow: 0 0 #0000;
+            --tw-shadow-colored: 0 0 #0000;
+            --tw-blur:;
+            --tw-brightness:;
+            --tw-contrast:;
+            --tw-grayscale:;
+            --tw-hue-rotate:;
+            --tw-invert:;
+            --tw-saturate:;
+            --tw-sepia:;
+            --tw-drop-shadow:;
+            --tw-backdrop-blur:;
+            --tw-backdrop-brightness:;
+            --tw-backdrop-contrast:;
+            --tw-backdrop-grayscale:;
+            --tw-backdrop-hue-rotate:;
+            --tw-backdrop-invert:;
+            --tw-backdrop-opacity:;
+            --tw-backdrop-saturate:;
+            --tw-backdrop-sepia:;
+            --tw-contain-size:;
+            --tw-contain-layout:;
+            --tw-contain-paint:;
+            --tw-contain-style:
+        }
+
+        ::backdrop {
+            --tw-border-spacing-x: 0;
+            --tw-border-spacing-y: 0;
+            --tw-translate-x: 0;
+            --tw-translate-y: 0;
+            --tw-rotate: 0;
+            --tw-skew-x: 0;
+            --tw-skew-y: 0;
+            --tw-scale-x: 1;
+            --tw-scale-y: 1;
+            --tw-pan-x:;
+            --tw-pan-y:;
+            --tw-pinch-zoom:;
+            --tw-scroll-snap-strictness: proximity;
+            --tw-gradient-from-position:;
+            --tw-gradient-via-position:;
+            --tw-gradient-to-position:;
+            --tw-ordinal:;
+            --tw-slashed-zero:;
+            --tw-numeric-figure:;
+            --tw-numeric-spacing:;
+            --tw-numeric-fraction:;
+            --tw-ring-inset:;
+            --tw-ring-offset-width: 0px;
+            --tw-ring-offset-color: #fff;
+            --tw-ring-color: rgb(59 130 246 / .5);
+            --tw-ring-offset-shadow: 0 0 #0000;
+            --tw-ring-shadow: 0 0 #0000;
+            --tw-shadow: 0 0 #0000;
+            --tw-shadow-colored: 0 0 #0000;
+            --tw-blur:;
+            --tw-brightness:;
+            --tw-contrast:;
+            --tw-grayscale:;
+            --tw-hue-rotate:;
+            --tw-invert:;
+            --tw-saturate:;
+            --tw-sepia:;
+            --tw-drop-shadow:;
+            --tw-backdrop-blur:;
+            --tw-backdrop-brightness:;
+            --tw-backdrop-contrast:;
+            --tw-backdrop-grayscale:;
+            --tw-backdrop-hue-rotate:;
+            --tw-backdrop-invert:;
+            --tw-backdrop-opacity:;
+            --tw-backdrop-saturate:;
+            --tw-backdrop-sepia:;
+            --tw-contain-size:;
+            --tw-contain-layout:;
+            --tw-contain-paint:;
+            --tw-contain-style:
+        }
+
+        *,
+        :before,
+        :after {
+            box-sizing: border-box;
+            border-width: 0;
+            border-style: solid;
+            border-color: #e5e7eb
+        }
+
+        :before,
+        :after {
+            --tw-content: ""
+        }
+
+        html,
+        :host {
+            line-height: 1.5;
+            -webkit-text-size-adjust: 100%;
+            -moz-tab-size: 4;
+            -o-tab-size: 4;
+            tab-size: 4;
+            font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+            font-feature-settings: normal;
+            font-variation-settings: normal;
+            -webkit-tap-highlight-color: transparent
+        }
+
+        body {
+            margin: 0;
+            line-height: inherit
+        }
+
+        hr {
+            height: 0;
+            color: inherit;
+            border-top-width: 1px
+        }
+
+        abbr:where([title]) {
+            -webkit-text-decoration: underline dotted;
+            text-decoration: underline dotted
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-size: inherit;
+            font-weight: inherit
+        }
+
+        a {
+            color: inherit;
+            text-decoration: inherit
+        }
+
+        b,
+        strong {
+            font-weight: bolder
+        }
+
+        code,
+        kbd,
+        samp,
+        pre {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+            font-feature-settings: normal;
+            font-variation-settings: normal;
+            font-size: 1em
+        }
+
+        small {
+            font-size: 80%
+        }
+
+        sub,
+        sup {
+            font-size: 75%;
+            line-height: 0;
+            position: relative;
+            vertical-align: baseline
+        }
+
+        sub {
+            bottom: -.25em
+        }
+
+        sup {
+            top: -.5em
+        }
+
+        table {
+            text-indent: 0;
+            border-color: inherit;
+            border-collapse: collapse
+        }
+
+        button,
+        input,
+        optgroup,
+        select,
+        textarea {
+            font-family: inherit;
+            font-feature-settings: inherit;
+            font-variation-settings: inherit;
+            font-size: 100%;
+            font-weight: inherit;
+            line-height: inherit;
+            letter-spacing: inherit;
+            color: inherit;
+            margin: 0;
+            padding: 0
+        }
+
+        button,
+        select {
+            text-transform: none
+        }
+
+        button,
+        input:where([type=button]),
+        input:where([type=reset]),
+        input:where([type=submit]) {
+            -webkit-appearance: button;
+            background-color: transparent;
+            background-image: none
+        }
+
+        :-moz-focusring {
+            outline: auto
+        }
+
+        :-moz-ui-invalid {
+            box-shadow: none
+        }
+
+        progress {
+            vertical-align: baseline
+        }
+
+        ::-webkit-inner-spin-button,
+        ::-webkit-outer-spin-button {
+            height: auto
+        }
+
+        [type=search] {
+            -webkit-appearance: textfield;
+            outline-offset: -2px
+        }
+
+        ::-webkit-search-decoration {
+            -webkit-appearance: none
+        }
+
+        ::-webkit-file-upload-button {
+            -webkit-appearance: button;
+            font: inherit
+        }
+
+        summary {
+            display: list-item
+        }
+
+        blockquote,
+        dl,
+        dd,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        hr,
+        figure,
+        p,
+        pre {
+            margin: 0
+        }
+
+        fieldset {
+            margin: 0;
+            padding: 0
+        }
+
+        legend {
+            padding: 0
+        }
+
+        ol,
+        ul,
+        menu {
+            list-style: none;
+            margin: 0;
+            padding: 0
+        }
+
+        dialog {
+            padding: 0
+        }
+
+        textarea {
+            resize: vertical
+        }
+
+        input::-moz-placeholder,
+        textarea::-moz-placeholder {
+            opacity: 1;
+            color: #9ca3af
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            opacity: 1;
+            color: #9ca3af
+        }
+
+        button,
+        [role=button] {
+            cursor: pointer
+        }
+
+        :disabled {
+            cursor: default
+        }
+
+        img,
+        svg,
+        video,
+        canvas,
+        audio,
+        iframe,
+        embed,
+        object {
+            display: block;
+            vertical-align: middle
+        }
+
+        img,
+        video {
+            max-width: 100%;
+            height: auto
+        }
+
+        [hidden]:where(:not([hidden=until-found])) {
+            display: none
+        }
+
+        .fixed {
+            position: fixed
+        }
+
+        .absolute {
+            position: absolute
+        }
+
+        .relative {
+            position: relative
+        }
+
+        .bottom-full {
+            bottom: 100%
+        }
+
+        .left-1\/2 {
+            left: 50%
+        }
+
+        .mx-auto {
+            margin-left: auto;
+            margin-right: auto
+        }
+
+        .mb-2 {
+            margin-bottom: .5rem
+        }
+
+        .mb-3 {
+            margin-bottom: .75rem
+        }
+
+        .mb-4 {
+            margin-bottom: 1rem
+        }
+
+        .mb-6 {
+            margin-bottom: 1.5rem
+        }
+
+        .mb-8 {
+            margin-bottom: 2rem
+        }
+
+        .ml-5 {
+            margin-left: 1.25rem
+        }
+
+        .mt-0\.5 {
+            margin-top: .125rem
+        }
+
+        .mt-1 {
+            margin-top: .25rem
+        }
+
+        .mt-2 {
+            margin-top: .5rem
+        }
+
+        .block {
+            display: block
+        }
+
+        .flex {
+            display: flex
+        }
+
+        .inline-flex {
+            display: inline-flex
+        }
+
+        .contents {
+            display: contents
+        }
+
+        .hidden {
+            display: none
+        }
+
+        .h-\[20px\] {
+            height: 20px
+        }
+
+        .min-h-a4 {
+            min-height: 297mm
+        }
+
+        .min-h-screen {
+            min-height: 100vh
+        }
+
+        .w-5 {
+            width: 1.25rem
+        }
+
+        .w-full {
+            width: 100%
+        }
+
+        .min-w-0 {
+            min-width: 0px
+        }
+
+        .max-w-\[200px\] {
+            max-width: 200px
+        }
+
+        .max-w-md {
+            max-width: 28rem
+        }
+
+        .flex-1 {
+            flex: 1 1 0%
+        }
+
+        .-translate-x-1\/2 {
+            --tw-translate-x: -50%;
+            transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+        }
+
+        .transform {
+            transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+        }
+
+        .cursor-help {
+            cursor: help
+        }
+
+        .list-disc {
+            list-style-type: disc
+        }
+
+        .break-before-page {
+            -moz-column-break-before: page;
+            break-before: page
+        }
+
+        .flex-col {
+            flex-direction: column
+        }
+
+        .flex-wrap {
+            flex-wrap: wrap
+        }
+
+        .items-center {
+            align-items: center
+        }
+
+        .items-baseline {
+            align-items: baseline
+        }
+
+        .justify-end {
+            justify-content: flex-end
+        }
+
+        .justify-center {
+            justify-content: center
+        }
+
+        .justify-between {
+            justify-content: space-between
+        }
+
+        .gap-1\.5 {
+            gap: .375rem
+        }
+
+        .gap-2 {
+            gap: .5rem
+        }
+
+        .gap-4 {
+            gap: 1rem
+        }
+
+        .gap-x-2 {
+            -moz-column-gap: .5rem;
+            column-gap: .5rem
+        }
+
+        .gap-x-4 {
+            -moz-column-gap: 1rem;
+            column-gap: 1rem
+        }
+
+        .gap-y-1 {
+            row-gap: .25rem
+        }
+
+        .space-y-1>:not([hidden])~:not([hidden]) {
+            --tw-space-y-reverse: 0;
+            margin-top: calc(.25rem * calc(1 - var(--tw-space-y-reverse)));
+            margin-bottom: calc(.25rem * var(--tw-space-y-reverse))
+        }
+
+        .space-y-1\.5>:not([hidden])~:not([hidden]) {
+            --tw-space-y-reverse: 0;
+            margin-top: calc(.375rem * calc(1 - var(--tw-space-y-reverse)));
+            margin-bottom: calc(.375rem * var(--tw-space-y-reverse))
+        }
+
+        .space-y-4>:not([hidden])~:not([hidden]) {
+            --tw-space-y-reverse: 0;
+            margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+            margin-bottom: calc(1rem * var(--tw-space-y-reverse))
+        }
+
+        .space-y-8>:not([hidden])~:not([hidden]) {
+            --tw-space-y-reverse: 0;
+            margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
+            margin-bottom: calc(2rem * var(--tw-space-y-reverse))
+        }
+
+        .whitespace-nowrap {
+            white-space: nowrap
+        }
+
+        .break-words {
+            overflow-wrap: break-word
+        }
+
+        .break-all {
+            word-break: break-all
+        }
+
+        .rounded {
+            border-radius: .25rem
+        }
+
+        .rounded-lg {
+            border-radius: .5rem
+        }
+
+        .border {
+            border-width: 1px
+        }
+
+        .border-b-2 {
+            border-bottom-width: 2px
+        }
+
+        .border-gray-300 {
+            --tw-border-opacity: 1;
+            border-color: rgb(209 213 219 / var(--tw-border-opacity, 1))
+        }
+
+        .bg-gray-100 {
+            --tw-bg-opacity: 1;
+            background-color: rgb(243 244 246 / var(--tw-bg-opacity, 1))
+        }
+
+        .bg-gray-200 {
+            --tw-bg-opacity: 1;
+            background-color: rgb(229 231 235 / var(--tw-bg-opacity, 1))
+        }
+
+        .bg-white {
+            --tw-bg-opacity: 1;
+            background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1))
+        }
+
+        .p-2 {
+            padding: .5rem
+        }
+
+        .p-4 {
+            padding: 1rem
+        }
+
+        .p-6 {
+            padding: 1.5rem
+        }
+
+        .px-1\.5 {
+            padding-left: .375rem;
+            padding-right: .375rem
+        }
+
+        .px-2 {
+            padding-left: .5rem;
+            padding-right: .5rem
+        }
+
+        .px-4 {
+            padding-left: 1rem;
+            padding-right: 1rem
+        }
+
+        .py-0\.5 {
+            padding-top: .125rem;
+            padding-bottom: .125rem
+        }
+
+        .py-1 {
+            padding-top: .25rem;
+            padding-bottom: .25rem
+        }
+
+        .py-16 {
+            padding-top: 4rem;
+            padding-bottom: 4rem
+        }
+
+        .text-center {
+            text-align: center
+        }
+
+        .text-3xl {
+            font-size: 1.875rem;
+            line-height: 2.25rem
+        }
+
+        .text-\[10px\] {
+            font-size: 10px
+        }
+
+        .text-base {
+            font-size: 1rem;
+            line-height: 1.5rem
+        }
+
+        .text-lg {
+            font-size: 1.125rem;
+            line-height: 1.75rem
+        }
+
+        .text-sm {
+            font-size: .875rem;
+            line-height: 1.25rem
+        }
+
+        .text-xl {
+            font-size: 1.25rem;
+            line-height: 1.75rem
+        }
+
+        .text-xs {
+            font-size: .75rem;
+            line-height: 1rem
+        }
+
+        .font-bold {
+            font-weight: 700
+        }
+
+        .font-medium {
+            font-weight: 500
+        }
+
+        .font-semibold {
+            font-weight: 600
+        }
+
+        .not-italic {
+            font-style: normal
+        }
+
+        .leading-none {
+            line-height: 1
+        }
+
+        .leading-relaxed {
+            line-height: 1.625
+        }
+
+        .text-gray-300 {
+            --tw-text-opacity: 1;
+            color: rgb(209 213 219 / var(--tw-text-opacity, 1))
+        }
+
+        .text-gray-500 {
+            --tw-text-opacity: 1;
+            color: rgb(107 114 128 / var(--tw-text-opacity, 1))
+        }
+
+        .text-gray-600 {
+            --tw-text-opacity: 1;
+            color: rgb(75 85 99 / var(--tw-text-opacity, 1))
+        }
+
+        .text-gray-700 {
+            --tw-text-opacity: 1;
+            color: rgb(55 65 81 / var(--tw-text-opacity, 1))
+        }
+
+        .text-white {
+            --tw-text-opacity: 1;
+            color: rgb(255 255 255 / var(--tw-text-opacity, 1))
+        }
+
+        .opacity-0 {
+            opacity: 0
+        }
+
+        .shadow-lg {
+            --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / .1), 0 4px 6px -4px rgb(0 0 0 / .1);
+            --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+            box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+        }
+
+        .blur {
+            --tw-blur: blur(8px);
+            filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)
+        }
+
+        .backdrop-filter {
+            -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+            backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)
+        }
+
+        .transition {
+            transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+            transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+            transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+            transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+            transition-duration: .15s
+        }
+
+        .transition-all {
+            transition-property: all;
+            transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+            transition-duration: .15s
+        }
+
+        .transition-opacity {
+            transition-property: opacity;
+            transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+            transition-duration: .15s
+        }
+
+         :root {
+            font-family: Noto Sans Mono, monospace
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-size: 14px;
+            line-height: 1.5
+        }
+
+        h1 {
+            font-size: 1.75rem
+        }
+
+        h2 {
+            font-size: 1.25rem
+        }
+
+        h3 {
+            font-size: 1.1rem
+        }
+
+        .text-sm {
+            font-size: .8125rem
+        }
+
+        .text-xs {
+            font-size: .75rem
+        }
+
+        @media print {
+            @page {
+                size: A4;
+                margin: 8mm
+            }
+            body {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+                margin: 0 !important;
+                padding: 0 !important
+            }
+        }
+
+        .last\:mb-0:last-child {
+            margin-bottom: 0
+        }
+
+        .hover\:scale-\[1\.02\]:hover {
+            --tw-scale-x: 1.02;
+            --tw-scale-y: 1.02;
+            transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+        }
+
+        .hover\:text-blue-600:hover {
+            --tw-text-opacity: 1;
+            color: rgb(37 99 235 / var(--tw-text-opacity, 1))
+        }
+
+        .group:hover .group-hover\:opacity-100 {
+            opacity: 1
+        }
+
+        @media (min-width: 640px) {
+            .sm\:ml-4 {
+                margin-left: 1rem
+            }
+            .sm\:ml-auto {
+                margin-left: auto
+            }
+            .sm\:mt-0 {
+                margin-top: 0
+            }
+            .sm\:inline {
+                display: inline
+            }
+            .sm\:h-\[104px\] {
+                height: 104px
+            }
+            .sm\:max-w-none {
+                max-width: none
+            }
+            .sm\:flex-row {
+                flex-direction: row
+            }
+            .sm\:items-start {
+                align-items: flex-start
+            }
+            .sm\:items-baseline {
+                align-items: baseline
+            }
+            .sm\:justify-between {
+                justify-content: space-between
+            }
+            .sm\:gap-0 {
+                gap: 0px
+            }
+            .sm\:break-normal {
+                overflow-wrap: normal;
+                word-break: normal
+            }
+            .sm\:p-3 {
+                padding: .75rem
+            }
+            .sm\:p-4 {
+                padding: 1rem
+            }
+        }
+
+        @media (min-width: 768px) {
+            .md\:w-a4 {
+                width: 210mm
+            }
+            .md\:p-\[8mm\] {
+                padding: 8mm
+            }
+        }
+
+        @media print {
+            .print\:bg-white {
+                --tw-bg-opacity: 1;
+                background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1))
+            }
+            .print\:p-0 {
+                padding: 0
+            }
+            .print\:text-gray-600 {
+                --tw-text-opacity: 1;
+                color: rgb(75 85 99 / var(--tw-text-opacity, 1))
+            }
+            .print\:no-underline {
+                text-decoration-line: none
+            }
+            .print\:shadow-none {
+                --tw-shadow: 0 0 #0000;
+                --tw-shadow-colored: 0 0 #0000;
+                box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+            }
+        }
+    </style>
+</head>
 <body>
-    <div class="wrapper mt-lg-5">
-        <div class="sidebar-wrapper">
-            <div class="profile-container">
-                <img class="profile" src="assets/images/profile.png" alt="" />
-                <h1 class="name">Shih Chun Yu</h1>
-                <h3 class="tagline">Tom Shih</h3>
-            </div><!--//profile-container-->
-            
-            <div class="contact-container container-block">
-                <ul class="list-unstyled contact-list">
-                    <li class="email" style="font-size: 13px;"><i class="fas fa-envelope"></i><a href="mailto: tom19960222@gmail.com">tom19960222@gmail.com</a></li>
-                    <li class="phone"><i class="fas fa-phone"></i><a href="tel:+886-971-871-022">+886-971-871-022</a></li>
-                    <li class="website"><i class="fas fa-globe"></i><a href="https://yeekaros.net" target="_blank">yeekaros.net</a></li>
-                    <li class="github" style="font-size: 13px;"><i class="fab fa-github"></i><a href="https://github.com/tom19960222" target="_blank">github.com/tom19960222</a></li>
-                    <li class="twitter"><i class="fab fa-twitter"></i><a href="https://twitter.com/tom19960222" target="_blank">@tom19960222</a></li>
-                </ul>
-            </div><!--//contact-container-->
-            
-            <div class="languages-container container-block">
-                <h2 class="container-block-title">Languages</h2>
-                <ul class="list-unstyled interests-list">
-                    <li>Chinese <span class="lang-desc">(Native)</span></li>
-                    <li>Taiwanese <span class="lang-desc">(Native)</span></li>
-                    <li>English <span class="lang-desc">(Read / Write / Speak)</span></li>
-                    <li>Japanese <span class="lang-desc">(Read / Write / Speak, JLPT N2)</span></li>
-                </ul>
-            </div><!--//interests-->
-        </div><!--//sidebar-wrapper-->
-        
-        <div class="main-wrapper">
-            
-            <section class="section summary-section">
-                <h2 class="section-title"><span class="icon-holder"><i class="fas fa-user"></i></span>自我介紹</h2>
-                <div class="summary">
-                    <p>
-                        對各種系統充滿著好奇心的資深開發者，主攻 Web 後端開發、DevOps 自動化與基礎設施管理。<br />
-                        相信運作良好的系統不只是工程師們的努力，更上一層樓的關鍵是與業務單位的合作無間
-                    </p>
-                    <ul>
-                        <li>Web Backend Development (Node.js / Python)</li>
-                        <li>Web Frontend Development (Vue.js)</li>
-                        <li>伺服器與應用程式管理
-                            <ul>
-                                <li>使用 Proxmox VE / VMWare ESXi 建立虛擬化叢集</li>
-                                <li>Linux VM 建立與維護，使用 Ubuntu / Debian / CentOS / Alpine Linux</li>
-                                <li>Docker 容器管理，使用 Docker Compose 與 AWS ECS</li>
-                                <li>將舊有 VM 佈署的應用程式遷移至 Docker 佈署，根據程式需求自行編寫 Dockerfile</li>
-                                <li>DevOps CI/CD pipeline 建立與維護，使用過 Drone, Gitlab CI, Jenkins, Azure DevOps</li>
-                                <li>使用 ELK 和 Grafana Labs 系列開源軟體進行伺服器監控與 log 收集</li>
-                                <li>使用 Prometheus 監控服務與網路設備健康狀態，針對沒有現成 Prometheus exporter 的設備自行開發監控程式</li>
-                                <li>使用 CDN 與 WAF 服務阻擋惡意攻擊，使用 Imperva 與 AWS Cloudfront + WAF</li>
-                            </ul>
-                        </li>
-                        <li>
-                            雲端服務
-                            <ul>
-                                <li>Amazon Web Services</li>
-                                <li>Google Cloud Platform</li>
-                                <li>Linode</li>
-                                <li>Vultr</li>
-                            </ul>
-                        </li>
-                        <li>網路管理
-                            <ul>
-                                <!-- TODO: 這邊加點簡單能力介紹 -->
-                                <li>使用 <a href="https://bgp.he.net/AS38852">AS38852</a> 做 BGP Peering / Transit，並租用兩個 Class C 的 IP 使用</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div><!--//summary-->
-            </section><!--//section-->
-            
-            <section class="section experiences-section">
-                <h2 class="section-title"><span class="icon-holder"><i class="fas fa-briefcase"></i></span>經歷</h2>
-                
-                <div class="item">
-                    <div class="meta">
-                        <div class="upper-row">
-                            <h3 class="job-title">Site Reliability Engineer</h3>
-                            <div class="time">May. 2023 - Sep. 2024 (1yrs 5mos)</div>
-                        </div><!--//upper-row-->
-                        <div class="company">Pi Mobile Technology Co., Ltd. (Pi Wallet / PCHomePay)</div>
-                    </div><!--//meta-->
-                    <div class="details">
-                        <p>
-                            Led zero-downtime migration of core payments from on-prem VMware to AWS; rebuilt runtime on AWS ECS, ported firewall policy to Security Groups + AWS WAF, and stabilized cutover with staged replication.
-                        </p>
-                        <ul>
-                            <li>
-                                Rebuilt PHP runtime from scratch (Dockerfiles, Nginx + php-fpm) by reverse-engineering live VMs where documentation was missing.
-                            </li>
-                            <li>
-                                Switched workloads to ARM images; lowered compute cost by ~20–25% without performance regressions.
-                            </li>
-                            <li>
-                                Built hybrid connectivity (Direct Connect + site-to-site VPN), routed with OSPF/BGP, added Transit Gateway failover; minimized operational toil by avoiding per-host static routes.
-                            </li>
-                            <li>
-                                Moved cron jobs to Step Functions + EventBridge (on ECS) with retries and Slack alerts; >90% drop in job compute cost and clear auditability.
-                            </li>
-                            <li>
-                                Centralized telemetry (Prometheus + Grafana + CloudWatch) and authored custom exporters for business KPIs so ops and business share one health view.
-                            </li>
-                        </ul>
-                    </div><!--//details-->
-                </div><!--//item-->
-
-                <div class="item">
-                    <div class="meta">
-                        <div class="upper-row">
-                            <h3 class="job-title">Chief Technology Officer</h3>
-                            <div class="time">Jul. 2019 - May. 2023 (3yrs 10mos)</div>
-                        </div><!--//upper-row-->
-                        <div class="company">趣味金融科技有限公司 / 廿一世紀數位科技股份有限公司 / 二十一世紀數位科技股份有限公司</div>
-                    </div><!--//meta-->
-                    <div class="details">
-                        <p>從零開始建立公司的資訊基礎架構，並主導公司內部系統與嘗試性新專案等多項專案開發</p>
-                        <p>在母公司 (廿一世紀數位科技股份有限公司) 被網路家庭國際資訊股份有限公司 (PCHome) 收購與收購喬睿科技股份有限公司 (TapPay) 以後，協助團隊之間的技術合作與團隊整合與協作規劃</p>
-                        <p>負責以下專案：</p>
-                        <ul>
-                            <li>
-                                慢點付 Paylater (系統架構設計與後端服務開發)
-                                <ul>
-                                    <li>是一個先買後付 (BNPL) 的支付平台，消費者只要提供身分證與個人基本資料，透過自行開發的信用評分系統，只需幾秒鐘審核就可取得消費額度</li>
-                                    <li>導入微服務架構，讓支付服務可以獨立快速擴展，不需要在容量不足時擴展整套系統</li>
-                                    <li>支付 API 規格相容 Line Pay，讓已經串接 Line Pay 的商家可以快速串接 Paylater</li>
-                                    <li>與兩家銀行串接 ATM 和超商繳款，提供消費者繳交帳單服務</li>
-                                    <li>信用評分系統串接政府各種查詢資料 API，並綜合上千萬筆法律相關資料建構出的評分模型，可在數秒內決定要給予消費者多少額度</li>
-                                    <li>導入 TypeScript、自行開發的程式範本與 Linter，讓初級工程師可以快速上手為專案貢獻程式碼</li>
-                                    <li>利用 Grafana 與 Redash 建構非技術人員也可簡單了解各種商業指標的 dashboard，同時也被用來抓出有問題的交易</li>
-                                </ul>
-                            </li>
-                            <li>
-                                電話訪問系統 (系統架構設計與後端開發)
-                                <ul>
-                                    <li>為一多功能的雲端總機系統，基於 Asterisk 進行開發，包含名單自動撥號、來電佇列、大量簡訊發送、回撥、多層可客製化的權限等功能</li>
-                                    <li>全套系統架設於 GCP 台灣區，並直接連線至遠傳 SIP Trunk，中間不經過任何地端設備，提供最低的延遲與維護成本</li>
-                                    <li>藉由將總機架設在雲端，不需要 VPN 或昂貴的專線才可串聯不同辦公室之間的話機，實測在 NAT 環境下也可正常運作無虞</li>
-                                    <li>提供話機與 App 兩種使用方式，讓人員在公司內外皆可使用</li>
-                                    <li>架設 Kamailio 讓多台 Asterisk 可以共用同一批號碼撥出與撥入，更可在不同公司和用途之間切換號碼以避免號碼被回報為騷擾電話</li>
-                                </ul>
-                            </li>
-                            <li>
-                                挖礦機房建置 (協助進行規劃)
-                                <ul>
-                                    <li>協助規劃兩個乙太幣挖礦機房建置，兩者加起來有超過 40 台礦機與超過 150 張 NVidia GTX 3070/3080 顯示卡</li>
-                                    <li>規劃機房網路架構，利用 GRE Tunnel 與辦公室內網串聯，並利用 OSPF 協定交換路由，讓機房的資料可以直接回傳公司</li>
-                                    <li>協助進行電力與冷氣容量估算與驗算，電力使用超過 50kW，同時提供 55kW 以上的冷房能力</li>
-                                    <li>使用 NodeMCU 搭配 DHT22 溫濕度感測器建立感測節點，加上 Raspberry Pi 4 執行自行編寫的 Prometheus Exporter 作為主機建立 IoT 環境監控，並搭配 Prometheus + Alertmanager 在溫度異常時自動告警</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div><!--//details-->
-                </div><!--//item-->
-                
-                <div class="item">
-                    <div class="meta">
-                        <div class="upper-row">
-                            <h3 class="job-title">技術領導人, 共同創辦人</h3>
-                            <div class="time">Oct. 2018 - Jun. 2019 (9 mos)</div>
-                        </div><!--//upper-row-->
-                        <div class="company">山英資訊有限公司</div>
-                    </div><!--//meta-->
-                    <div class="details">
-                        <p>提供家庭與辦公室電腦購置維護、網路設備規劃建置、資訊系統外包製作服務</p>
-                        <p>主導下列專案： </p>
-                        <ul>
-                            <li>
-                                線上開店平台
-                                <ul>
-                                    <li>一個簡易的線上開店平台，提供基本的進銷存與下訂單功能，且多間商店可共用同一個後端並套用不同版面</li>
-                                    <li>使用 Vue.js + Node.js 開發，且所有 API 都使用 GraphQL，讓 GraphQL schema 本身即是 API 文件</li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="https://www.happyfan7.com/">樂分期</a> 網站維護
-                                <ul>
-                                    <li>使用 Prometheus + Grafana 進行網站上線狀況監控與告警</li>
-                                    <li>使用 Twillio 搭配自行開發的 script 在網站出問題時自動撥打手機通知值班人員進行處理</li>
-                                    <li>協助進行原始碼 Review，抓出系統內數個 SQL injection 漏洞與造成嚴重效能異常的程式</li>
-                                </ul>
-                            </li>
-                        </ul>
-                        
-                    </div><!--//details-->
-                </div><!--//item-->
-
-                <div class="item">
-                    <div class="meta">
-                        <div class="upper-row">
-                            <h3 class="job-title">後端工程師</h3>
-                            <div class="time">Mar. 2017 - Oct. 2018 (1yr 8mos)</div>
-                        </div><!--//upper-row-->
-                        <div class="company">鉑鑉股份有限公司 (MyProGuide)</div>
-                    </div><!--//meta-->
-                    <div class="details">
-                        <p>將舊有的官方網站與行程訂購網站翻新，開發新系統並導入 AWS 與 CI/CD 流程</p>  
-                        <ul>
-                            <li>主導將舊有 server side rendering 的 jQuery + Django 架構漸進轉移到新的前後端分離 Angular + Node.js 架構，轉換中新舊兩個版本的後端同時運作且無資料不同步的問題</li>
-                            <li>將後端從舊有的 Heroku 平台轉換至 AWS，並改以 Docker + ECS 進行部署</li>
-                            <li>新架構串接 PayPal 與綠界金流，讓顧客在網站上下單完即可馬上付款</li>
-                            <li>轉換至新架構時將業務邏輯完全重新梳理，讓訂單流程減少了 1/3 的步驟，同時減少了一半的訂單狀態</li>
-                            <li>使用 AWS CodePipeline 與 CodeBuild 導入 CI/CD 流程，從 commit, build 到 deploy 一氣呵成</li>
-                            <li>使用 AWS S3 + Cloudfront 部署舊有台北市立導遊協會網站，並協助使用 EC2 + PHP 7 + Wordpress 建置新版網站</li>
-                        </ul>
-                    </div><!--//details-->
-                </div><!--//item-->
-                
-            </section><!--//section-->
-            
-            <section class="section skills-section">
-                <h2 class="section-title" style="margin-bottom: 5px;"><span class="icon-holder"><i class="fas fa-tools"></i></span>技術能力</h2>
-
-                <div class="item">
-                    <div class="details">
-                        <span class="skill-item">Node.js</span>
-                        <span class="skill-item">TypeScript</span>
-                        <span class="skill-item">Python</span>
-                        <span class="skill-item">PostgreSQL</span>
-                        <span class="skill-item">MySQL</span>
-                        <span class="skill-item">MacOS</span>
-                        <span class="skill-item">Linux</span>
-                        <span class="skill-item">Docker</span>
-                        <span class="skill-item">Bash</span>
-                        <span class="skill-item">Git</span>
-                        <span class="skill-item">Amazon Web Services</span>
-                        <span class="skill-item">Google Cloud Platform</span>
+    <div class="resume-page">
+        <div class="flex justify-center bg-gray-100 p-2 sm:p-4 print:bg-white print:p-0">
+            <article class="mx-auto min-h-a4 w-full bg-white p-2 shadow-lg sm:p-3 md:w-a4 md:p-[8mm] print:shadow-none" role="main" aria-label="SHIH CHUN YU Resume">
+                <header class="mb-6">
+                    <div class="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between sm:gap-0">
+                        <div class="flex flex-col">
+                            <div class="text-3xl font-bold">Shih Chun Yu<span class="text-gray-600">(Tom Shih)</span></div>
+                            <div class="mb-3 max-w-md">
+                                <!-- <p class="text-sm text-gray-700 leading-relaxed">Senior Backend Engineer</p> -->
+                                <p class="text-sm text-gray-700 leading-relaxed">With 8+ years in backend development, DevOps, infrastructure management.</p>
+                                <p class="text-sm text-gray-700 leading-relaxed">Believes that well-functioning systems are the result of engineers’ efforts and seamless collaboration within teams.</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col justify-end text-gray-600 sm:h-[104px]">
+                            <div class="flex flex-col space-y-1.5 sm:ml-auto">
+                                <div class="flex items-center gap-2"><i class="hidden w-5 text-center opacity-0 sm:inline"></i> <i class="hidden w-5 text-center opacity-0 sm:inline"></i> <i class="fas fa-location-dot w-5 text-center"></i> <span>Taipei, Taiwan</span></div>
+                                <div class="flex items-center gap-2"><i class="hidden w-5 text-center opacity-0 sm:inline"></i> <i class="hidden w-5 text-center opacity-0 sm:inline"></i>
+                                    <a class="flex items-center gap-2 hover:text-blue-600 print:text-gray-600 print:no-underline" href="tel:+886-971-871-022"><i class="fas fa-mobile-screen w-5 text-center"></i> <span class="break-all sm:break-normal">+886-971-871-022</span></a>
+                                </div>
+                                <div class="flex items-center gap-2"><i class="hidden w-5 text-center opacity-0 sm:inline"></i> <i class="hidden w-5 text-center opacity-0 sm:inline"></i>
+                                    <a class="flex items-center gap-2 hover:text-blue-600 print:text-gray-600 print:no-underline" href="mailto:me@yeekaros.net"><i class="fas fa-envelope w-5 text-center"></i> <span class="break-all sm:break-normal">me@yeekaros.net</span></a>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <a target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" class="hover:text-blue-600 print:text-gray-600" href="https://github.com/tom19960222"><i class="fab fa-github w-5 text-center"></i></a>
+                                    <a target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" class="hover:text-blue-600 print:text-gray-600" href="https://linkedin.com/in/tom19960222"><i class="fab fa-linkedin w-5 text-center"></i></a>
+                                    <a class="flex items-center gap-2 hover:text-blue-600 print:text-gray-600 print:no-underline" href="https://yeekaros.net"><i class="fas fa-globe w-5 text-center"></i> <span class="break-all sm:break-normal">https://yeekaros.net</span></a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </section>
-
-            <section class="section experiences-section">
-                <h2 class="section-title"><span class="icon-holder"><i class="fas fa-university"></i></span>Education</h2>
-                <div class="item">
-                    <div class="meta">
-                        <div class="upper-row">
-                            <h3 class="job-title">Tamkang University</h3>
-                            <div class="time">2014 - 2021</div>
-                        </div><!--//upper-row-->
-                        <div class="company">Department of Computer Science and Information Engineering</div>
-                    </div><!--//meta-->
-                    <div class="details">
-                        <ul>
-                            <li>
-                                Built a container platform giving students root access to run servers, install software, and host web services; scaled to 1,000+ concurrent containers.
-                            </li>
-                            <li>
-                                Implemented self-service provisioning via university email authentication, enabling instant access.
-                            </li>
-                            <li>Designed and maintained overall system architecture and infrastructure.</li>
+                </header>
+                <section class="mb-8" aria-labelledby="experience-heading">
+                    <h2 id="experience-heading" class="mb-4 border-b-2 border-gray-300 text-xl font-bold">Experience</h2>
+                    <div class="mb-4">
+                        <div class="flex flex-col gap-y-1 sm:flex-row sm:items-baseline sm:justify-between">
+                            <h3 class="text-lg font-semibold">Site Reliability Engineer</h3> <span class="text-gray-600">May. 2023 - Sep. 2024</span>
+                        </div>
+                        <div class="mb-2 flex flex-wrap items-baseline gap-x-2">
+                            <div class="font-medium text-gray-700">Pi Mobile Technology Co., Ltd. (Pi Wallet / PCHomePay)</div>
+                            <!-- <div class="text-xs text-gray-500">· The easiest photo and video editing app to add magic to your treasured memories</div> -->
+                        </div>
+                        <ul class="ml-5 list-disc space-y-1 text-gray-700">
+                            <li class="break-words">Led <span class="font-semibold"> zero-downtime migration </span> of core payments from on-premise VMware to AWS</li>
+                            <li class="break-words"><span class="font-semibold">Rebuilt</span> PHP runtime from scratch by <span class="font-semibold">reverse-engineering </span>live VMs where documentation was missing.</li>
+                            <li class="break-words">Lowered compute cost by <span class="font-semibold">20–25%</span> without performance regressions by switched workloads to ARM images.</li>
+                            <li class="break-words">Built <span class="font-semibold">hybrid connectivity</span> (Direct Connect + site-to-site VPN), routed with BGP, using Transit Gateway to archive <span class="font-semibold">auto-failover</span>.</li>
+                            <li class="break-words"><span class="font-semibold">Decreased 90%+</span> in job compute cost and clear auditability by moving cron jobs to Step Functions + EventBridge (on ECS) with retries and Slack alerts.</li>
+                            <li class="break-words"><span class="font-semibold">Centralized</span> telemetry (Prometheus + Grafana + CloudWatch) and authored custom exporters for business KPIs so ops and business share one health view.</li> 
                         </ul>
-                    </div><!--//details-->
-                </div><!--//item-->
-                
-            </section><!--//section-->
-
-        </div><!--//main-body-->
+                        <div class="mt-2 flex flex-wrap gap-2"><span class="rounded bg-gray-200 px-2 py-0.5 text-xs">PHP</span><span class="rounded bg-gray-200 px-2 py-0.5 text-xs">AWS Elastic Container Service</span><span class="rounded bg-gray-200 px-2 py-0.5 text-xs">AWS Database Migration Service</span><span class="rounded bg-gray-200 px-2 py-0.5 text-xs">AWS Direct Connect</span><span class="rounded bg-gray-200 px-2 py-0.5 text-xs">AWS Transit Gateway</span><span class="rounded bg-gray-200 px-2 py-0.5 text-xs">AWS Step Functions</span><span class="rounded bg-gray-200 px-2 py-0.5 text-xs">AWS Cloud Development Kit</span><span class="rounded bg-gray-200 px-2 py-0.5 text-xs">VMWare ESXi</span></div>
+                    </div>
+                    <div class="mb-4">
+                        <div class="flex flex-col gap-y-1 sm:flex-row sm:items-baseline sm:justify-between">
+                            <h3 class="text-lg font-semibold">Chief Technology Officer</h3> <span class="text-gray-600">Jul. 2019 - May. 2023</span>
+                        </div>
+                        <div class="mb-2 flex flex-wrap items-baseline gap-x-2">
+                            <div class="font-medium text-gray-700">趣味金融科技股份有限公司</div>
+                            <!-- <div class="text-xs text-gray-500">· Taiwan's leading social media platform for youth engagement</div> -->
+                        </div>
+                        <ul class="ml-5 list-disc space-y-1 text-gray-700">
+                            <li class="break-words">Designed & built BNPL platform “Paylater”
+                              <ul class="ml-5 list-disc space-y-1">
+                                <li class="break-words">Designed merchant API <span class="font-semibold">Line Pay–compatible</span> to accelerate partner onboarding.</li>
+                                <li class="break-words">Shipped a credit-scoring engine combining government APIs and tens of millions of legal records; issued credit balance <span class="font-semibold">within seconds</span>.</li>
+                              </ul> 
+                            </li>
+                            <li class="break-words">Built cloud call center on GCP + Asterisk
+                              <ul class="ml-5 list-disc space-y-1">
+                                <li class="break-words">Hosted on GCP Taiwan region and <span class="font-semibold">directly connected</span> to Fareastone SIP trunk to get lowest latency.</li>
+                                <li class="break-words">Used Kamailio for <span class="font-semibold">multi-tenant number management.</li>
+                              </ul>
+                            </li>
+                            <li class="break-words">Built two ETH mining sites (40+ rigs, 150+ GPUs)
+                              <ul class="ml-5 list-disc space-y-1">
+                                <li class="break-words">Connect office between two site with <span class="font-semibold">GRE tunnel and OSPF</span> to simplify network management.</li>
+                                <li class="break-words">Built IoT telemetry with <span class="font-semibold"> automatic alerting</span>.</li>
+                              </ul>
+                            </li>
+                        </ul>
+                        <div class="mt-2 flex flex-wrap gap-2"><span class="rounded bg-gray-200 px-2 py-0.5 text-xs">TypeScript</span><span class="rounded bg-gray-200 px-2 py-0.5 text-xs">Python</span><span class="rounded bg-gray-200 px-2 py-0.5 text-xs">Elasticsearch</span><span class="rounded bg-gray-200 px-2 py-0.5 text-xs">GCP</span><span class="rounded bg-gray-200 px-2 py-0.5 text-xs">Asterisk</span><span class="rounded bg-gray-200 px-2 py-0.5 text-xs">Kamailio</span><span class="rounded bg-gray-200 px-2 py-0.5 text-xs">Prometheus</span><span class="rounded bg-gray-200 px-2 py-0.5 text-xs">Grafana</span><span class="rounded bg-gray-200 px-2 py-0.5 text-xs">Alertmanager</span></div>
+                    </div>
+                    <div class="mb-4">
+                        <div class="flex flex-col gap-y-1 sm:flex-row sm:items-baseline sm:justify-between">
+                            <h3 class="text-lg font-semibold">Technical Lead & Co-founder</h3> <span class="text-gray-600">Oct. 2018 - Jun. 2019</span>
+                        </div>
+                        <div class="mb-2 flex flex-wrap items-baseline gap-x-2">
+                            <div class="font-medium text-gray-700">山英資訊有限公司</div>
+                            <!-- <div class="text-xs text-gray-500">· Innovative automotive payment solutions for seamless mobility</div> -->
+                        </div>
+                        <ul class="ml-5 list-disc space-y-1 text-gray-700">
+                            <li class="break-words">Maintained an E-Commerce platform
+                              <ul class="ml-5 list-disc space-y-1">
+                                <li class="break-words">Built monitoring system with <span class="font-semibold">Prometheus/Grafana</span> and integrated Twilio API to make a phone call when system failed.</li>
+                              </ul></li>
+                        </ul>
+                        <div class="mt-2 flex flex-wrap gap-2"><span class="rounded bg-gray-200 px-2 py-0.5 text-xs">PHP</span><span class="rounded bg-gray-200 px-2 py-0.5 text-xs">Prometheus</span><span class="rounded bg-gray-200 px-2 py-0.5 text-xs">Grafana</span><span class="rounded bg-gray-200 px-2 py-0.5 text-xs">Twilio</span><span class="rounded bg-gray-200 px-2 py-0.5 text-xs">Jenkins</span></div>
+                    </div>
+                    <div class="mb-4">
+                      <div class="flex flex-col gap-y-1 sm:flex-row sm:items-baseline sm:justify-between">
+                          <h3 class="text-lg font-semibold">Backend Engineer</h3> <span class="text-gray-600">Mar. 2017 - Oct. 2018</span>
+                      </div>
+                      <div class="mb-2 flex flex-wrap items-baseline gap-x-2">
+                          <div class="font-medium text-gray-700">MyProGuide</div>
+                          <!-- <div class="text-xs text-gray-500">· Innovative automotive payment solutions for seamless mobility</div> -->
+                      </div>
+                      <ul class="ml-5 list-disc space-y-1 text-gray-700">
+                          <li class="break-words">Migrated legacy system from Django to Angular.js + Node.js while dual-running both stacks without data drift.</li>
+                          <li class="break-words">Moved from Heroku to AWS ECS.</li>
+                          <li class="break-words">Set up CI/CD with CodePipeline + CodeBuild; automated build/test/deploy.</li>
+                      </ul>
+                      <div class="mt-2 flex flex-wrap gap-2"><span class="rounded bg-gray-200 px-2 py-0.5 text-xs">Django</span><span class="rounded bg-gray-200 px-2 py-0.5 text-xs">Node.js</span><span class="rounded bg-gray-200 px-2 py-0.5 text-xs">Heroku</span><span class="rounded bg-gray-200 px-2 py-0.5 text-xs">AWS CodePipeline</span><span class="rounded bg-gray-200 px-2 py-0.5 text-xs">AWS CodeBuild</span></div>
+                  </div>
+                  <div class="mb-4">
+                </section>
+                <!-- <section class="mb-8" aria-labelledby="projects-heading">
+                    <h2 id="projects-heading" class="mb-4 border-b-2 border-gray-300 text-xl font-bold">Projects</h2>
+                    <div class="mb-2">
+                        <h3 class="text-lg font-semibold">gta</h3>
+                        <p class="mb-2 text-gray-700">GTA is a command-line tool for managing temporary IAM roles across cloud providers</p>
+                        <ul class="mb-3 ml-5 list-disc space-y-1 text-gray-700">
+                            <li>Automatic role revocation on program exit or interrupt</li>
+                            <li>Configurable time-to-live (TTL) for permissions</li>
+                            <li>Unique identifiers for each temporary binding for easy cleanup</li>
+                        </ul>
+                    </div>
+                    <div class="mb-2">
+                        <h3 class="text-lg font-semibold">go-dataloader</h3>
+                        <p class="mb-2 text-gray-700">A clean, safe, user-friendly implementation of GraphQL's Dataloader, written with generics in go.</p>
+                        <ul class="mb-3 ml-5 list-disc space-y-1 text-gray-700">
+                            <li>Written in generics with strong type</li>
+                            <li>Use shared memory via a communicating pattern</li>
+                            <li>Provide almost the same interface as the original Node.js Dataloader</li>
+                            <li>Implement a promise like thunk design, simply call `val, err := loader.Load(ctx, id).Get(ctx)`</li>
+                        </ul>
+                    </div>
+                    <div class="mb-2">
+                        <h3 class="text-lg font-semibold">go-batcher</h3>
+                        <p class="mb-2 text-gray-700">This is a batcher inspired by GraphQL's Dataloader and yckao's dataloader implementation.</p>
+                    </div>
+                </section> -->
+                <section class="mb-8" aria-labelledby="skills-heading">
+                    <h2 id="skills-heading" class="mb-4 border-b-2 border-gray-300 text-xl font-bold">Skills</h2>
+                    <div class="mb-4 last:mb-0">
+                        <h3 class="mb-2 text-base font-semibold">Languages</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <div class="flex items-center gap-1.5 rounded bg-gray-200 px-2 py-1 text-sm"><span>Chinese</span> <span class="text-xs text-gray-500">· Native</span></div>
+                            <div class="flex items-center gap-1.5 rounded bg-gray-200 px-2 py-1 text-sm"><span>Taiwanese</span> <span class="text-xs text-gray-500">· Native</span></div>
+                            <div class="flex items-center gap-1.5 rounded bg-gray-200 px-2 py-1 text-sm"><span>Japanese</span> <span class="text-xs text-gray-500">· Intermediate (JLPT N2)</span></div>
+                            <div class="flex items-center gap-1.5 rounded bg-gray-200 px-2 py-1 text-sm"><span>English</span> <span class="text-xs text-gray-500">· Intermediate (TOEIC 860)</span></div>
+                        </div>
+                    </div>
+                    <div class="mb-4 last:mb-0">
+                        <h3 class="mb-2 text-base font-semibold">Programming Languages</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <div class="flex items-center gap-1.5 rounded bg-gray-200 px-2 py-1 text-sm"><span>JavaScript</span> <span class="text-xs text-gray-500">· 9+ years</span></div>
+                            <div class="flex items-center gap-1.5 rounded bg-gray-200 px-2 py-1 text-sm"><span>TypeScript</span> <span class="text-xs text-gray-500">· 7+ years</span></div>
+                            <div class="flex items-center gap-1.5 rounded bg-gray-200 px-2 py-1 text-sm"><span>Python</span> <span class="text-xs text-gray-500">· ~2 years</span></div>
+                        </div>
+                    </div>
+                    <div class="mb-4 last:mb-0">
+                        <h3 class="mb-2 text-base font-semibold">Infrastructure</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <div class="flex items-center gap-1.5 rounded bg-gray-200 px-2 py-1 text-sm"><span>AWS</span> <span class="text-xs text-gray-500">· 8+ years</span></div>
+                            <div class="flex items-center gap-1.5 rounded bg-gray-200 px-2 py-1 text-sm"><span>Docker</span> <span class="text-xs text-gray-500">· 10+ years</span></div>
+                        </div>
+                    </div>
+                    <div class="mb-4 last:mb-0">
+                        <h3 class="mb-2 text-base font-semibold">Observability</h3>
+                        <div class="flex flex-wrap gap-2">
+                          <div class="flex items-center gap-1.5 rounded bg-gray-200 px-2 py-1 text-sm"><span>Prometheus</span> <span class="text-xs text-gray-500">· 7+ years</span></div>
+                            <div class="flex items-center gap-1.5 rounded bg-gray-200 px-2 py-1 text-sm"><span>Grafana</span> <span class="text-xs text-gray-500">· 7+ years</span></div>
+                        </div>
+                    </div>
+                    <div class="mb-4 last:mb-0">
+                        <h3 class="mb-2 text-base font-semibold">CI/CD</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <div class="flex items-center gap-1.5 rounded bg-gray-200 px-2 py-1 text-sm"><span>Drone CI</span> <span class="text-xs text-gray-500">· 3+ years</span></div>
+                            <div class="flex items-center gap-1.5 rounded bg-gray-200 px-2 py-1 text-sm"><span>GitLab CI</span> <span class="text-xs text-gray-500">· 1 year</span></div>
+                            <div class="flex items-center gap-1.5 rounded bg-gray-200 px-2 py-1 text-sm"><span>GitHub Actions</span> <span class="text-xs text-gray-500">· 1 year</span></div>
+                            <div class="flex items-center gap-1.5 rounded bg-gray-200 px-2 py-1 text-sm"><span>Jenkins</span> <span class="text-xs text-gray-500">· 2 years</span></div>
+                        </div>
+                    </div>
+                </section>
+                <!-- <section class="mb-8" aria-labelledby="community-heading">
+                    <h2 id="community-heading" class="mb-4 border-b-2 border-gray-300 text-xl font-bold">Community Activities</h2>
+                    <div class="mb-4">
+                        <div class="flex items-baseline justify-between">
+                            <h3 class="text-lg font-semibold">GopherDay Taiwan</h3> <span class="text-sm text-gray-500">2024</span>
+                        </div>
+                        <div class="mb-2 text-sm text-gray-600">Speaker: "Reflect 用太多，都不好意思跟別人說 Go 靜態了"</div>
+                    </div>
+                    <div class="mb-4">
+                        <div class="flex items-baseline justify-between">
+                            <h3 class="text-lg font-semibold">Conference for Open Source Coders, Users and Promoters</h3> <span class="text-sm text-gray-500">2023</span>
+                        </div>
+                        <div class="mb-2 text-sm text-gray-600">Speaker: "深入淺出 Go AST，動手做自己的 Linter"</div>
+                    </div>
+                    <div class="mb-4">
+                        <div class="flex items-baseline justify-between">
+                            <h3 class="text-lg font-semibold">Dcard Tech Sharing</h3> <span class="text-sm text-gray-500">2023</span>
+                        </div>
+                        <div class="mb-2 text-sm text-gray-600">Speaker: "千萬用戶的大流量下 Dcard 後端團隊怎麼面對？"</div>
+                    </div>
+                    <div class="mb-4">
+                        <div class="flex items-baseline justify-between">
+                            <h3 class="text-lg font-semibold">Golang Taiwan Gathering</h3> <span class="text-sm text-gray-500">2022</span>
+                        </div>
+                        <div class="mb-2 text-sm text-gray-600">Speaker: "擺脫 Lock 實作 GraphQL Dataloader"</div>
+                    </div>
+                </section> -->
+            </article>
+        </div>
     </div>
- 
-    <footer class="footer">
-        <div class="text-center">
-            <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
-            <small class="copyright">Designed with <i class="fas fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
-        </div><!--//container-->
-    </footer><!--//footer-->
-        
 </body>
-</html> 
-
+</html>
