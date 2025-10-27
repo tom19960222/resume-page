@@ -311,6 +311,9 @@
                 padding: 0 !important;
                 background-color: #fff !important
             }
+            .hide-on-print {
+                display: none !important;
+            }
             .resume-page .bg-gray-100,
             .resume-page .bg-gray-200 {
                 print-color-adjust: exact;
@@ -1427,6 +1430,31 @@
                             <li class="break-words">建立 AWS CodePipeline + CodeBuild 的 CI/CD，自動化建置、測試與部署。</li>
                         </ul>
                         <div class="mt-2 flex flex-wrap gap-2"><span class="rounded bg-gray-200 px-2 py-0.5 text-xs">Django</span><span class="rounded bg-gray-200 px-2 py-0.5 text-xs">Node.js</span><span class="rounded bg-gray-200 px-2 py-0.5 text-xs">Heroku</span><span class="rounded bg-gray-200 px-2 py-0.5 text-xs">AWS CodePipeline</span><span class="rounded bg-gray-200 px-2 py-0.5 text-xs">AWS CodeBuild</span></div>
+                    </div>
+                </section>
+                <section class="mb-8" aria-labelledby="homelab-heading">
+                    <h2 id="homelab-heading" class="mb-4 border-b-2 border-gray-300 text-xl font-bold">Homelab</h2>
+                    <div class="mb-4 hide-on-print">
+                        <a href="assets/images/homelab.png" target="_blank" rel="noopener noreferrer" class="block mt-2">
+                            <img src="assets/images/homelab.png" alt="Homelab 拓撲圖" class="w-full rounded border">
+                        </a>
+                    </div>
+                    <div>
+                        <div class="mb-4 p-4 rounded bg-gray-100">
+                            <h3 class="mb-2 text-base font-semibold">運算與儲存叢集</h3>
+                            <ul class="ml-5 list-disc space-y-1 text-gray-700">
+                                <li class="break-words">使用 3 個節點搭建 Proxmox VE 與 Ceph，提供超過 100TB 原始容量的高可用性儲存且 VM 可 live migration 到其他節點</li>
+                                <li class="break-words">由 3 個節點組成的 kubernetes cluster，使用 MetalLB 做為 load balancer 並使用 BGP 廣播服務 IP 給 core switch，安裝了 GarageHQ S3 相容儲存與計畫安裝 Prometheus + Thanos + Grafana Stack 做為監控</li>
+                            </ul>
+                        </div>
+                        <div class="mb-4 p-4 rounded bg-gray-100">
+                            <h3 class="mb-2 text-base font-semibold">網路拓撲與互聯</h3>
+                            <ul class="ml-5 list-disc space-y-1 text-gray-700">
+                                <li class="break-words">每台 Proxmox VE node 皆與 core switch Mikrotik CRS317 相連接 2 條 10G 光纖，使用獨立的子網路做為 Ceph cluster network</li>
+                                <li class="break-words">core router 使用 Mikrotik CCR1009，與老家的 homelab 使用 GRE over IPSec 串接，使用 OSPF 交換路由，串連兩地內網</li>
+                                <li class="break-words">使用 AS38852，在 STUIX 與 Cloudflare 等其他公司 peering，同時從 Vultr 收網際網路全表以後提供一個 /24 的自有 IP 可供使用</li>
+                            </ul>
+                        </div>
                     </div>
                 </section>
                 <section class="mb-8" aria-labelledby="education-heading">

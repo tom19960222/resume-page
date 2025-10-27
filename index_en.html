@@ -304,6 +304,10 @@
                 size: A4;
                 margin: 6mm
             }
+            .hide-on-print {
+                display: none !important;
+            }
+            .min-h-a4 { min-height: auto !important; }
             .resume-page {
                 -webkit-print-color-adjust: exact !important;
                 print-color-adjust: exact !important;
@@ -311,6 +315,53 @@
                 padding: 0 !important;
                 background-color: #fff !important
             }
+            /* Tighten typography and spacing for print */
+            .resume-page {
+                font-size: 11px !important;
+                line-height: 1.45 !important;
+            }
+            .resume-page h1 { font-size: 1.5rem !important; }
+            .resume-page h2 { font-size: 1.1rem !important; border-bottom-width: 1px !important; padding-bottom: 3px !important; margin: 12px 0 8px !important; }
+            .resume-page h3 { font-size: 1rem !important; }
+            .resume-page .text-3xl { font-size: 1.35rem !important; line-height: 1.5rem !important; }
+            .resume-page .text-lg { font-size: 1rem !important; line-height: 1.375rem !important; }
+            .resume-page .text-base { font-size: .9rem !important; line-height: 1.3rem !important; }
+            .resume-page .text-sm { font-size: .75rem !important; }
+            .resume-page .text-xs { font-size: .68rem !important; }
+            .resume-page section { margin-bottom: .9rem !important; }
+            .resume-page .mb-8 { margin-bottom: .9rem !important; }
+            .resume-page .mb-6 { margin-bottom: .75rem !important; }
+            .resume-page .mb-4 { margin-bottom: .5rem !important; }
+            .resume-page .mb-3 { margin-bottom: .375rem !important; }
+            .resume-page .mb-2 { margin-bottom: .25rem !important; }
+            .resume-page .p-4 { padding: .75rem !important; }
+            .resume-page .px-4 { padding-left: .75rem !important; padding-right: .75rem !important; }
+            .resume-page .ml-5 { margin-left: 1rem !important; }
+            .resume-page .space-y-1>:not([hidden])~:not([hidden]) {
+                margin-top: .15rem !important;
+                margin-bottom: .15rem !important;
+            }
+            .resume-page .space-y-1\.5>:not([hidden])~:not([hidden]) {
+                margin-top: .25rem !important;
+                margin-bottom: .25rem !important;
+            }
+            .resume-page .space-y-4>:not([hidden])~:not([hidden]) {
+                margin-top: .5rem !important;
+                margin-bottom: .5rem !important;
+            }
+            .resume-page .space-y-8>:not([hidden])~:not([hidden]) {
+                margin-top: .75rem !important;
+                margin-bottom: .75rem !important;
+            }
+            header { margin-bottom: .6rem !important; }
+            .resume-page .gap-2 { gap: .35rem !important; }
+            .resume-page .bg-gray-200 { padding: .15rem .35rem !important; font-size: .7rem !important; }
+            /* Shrink skill chips */
+            .resume-page .skill-chips { gap: .25rem !important; }
+            .resume-page .skill-chips .text-sm { font-size: .7rem !important; }
+            .resume-page .skill-chips .px-2 { padding-left: .35rem !important; padding-right: .35rem !important; }
+            .resume-page .skill-chips .py-1 { padding-top: .15rem !important; padding-bottom: .15rem !important; }
+            .print\:hidden { display: none !important; }
             .resume-page .bg-gray-100,
             .resume-page .bg-gray-200 {
                 print-color-adjust: exact;
@@ -1339,7 +1390,7 @@
 <body>
     <div class="resume-page">
         <div class="flex justify-center bg-gray-100 p-2 sm:p-4 print:bg-white print:p-0">
-            <article class="mx-auto min-h-a4 w-full bg-white p-2 shadow-lg sm:p-3 md:w-a4 md:p-[8mm] print:shadow-none" role="main" aria-label="SHIH CHUN YU Resume">
+            <article class="mx-auto min-h-a4 w-full bg-white p-2 shadow-lg sm:p-3 md:w-a4 md:p-[8mm] print:shadow-none print:p-0" role="main" aria-label="SHIH CHUN YU Resume">
                 <header class="mb-6">
                     <div class="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between sm:gap-0">
                         <div class="flex flex-col">
@@ -1360,8 +1411,8 @@
                                     <a class="flex items-center gap-2 hover:text-blue-600 print:text-gray-600 print:no-underline" href="mailto:me@yeekaros.net"><i class="fas fa-envelope w-5 text-center"></i> <span class="break-all sm:break-normal">me@yeekaros.net</span></a>
                                 </div>
                                 <div class="flex items-center gap-2">
-                                    <a target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" class="hover:text-blue-600 print:text-gray-600" href="https://github.com/tom19960222"><i class="fab fa-github w-5 text-center"></i></a>
-                                    <a target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" class="hover:text-blue-600 print:text-gray-600" href="https://linkedin.com/in/tom19960222"><i class="fab fa-linkedin w-5 text-center"></i></a>
+                                    <a target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" class="hover:text-blue-600 print:hidden" href="https://github.com/tom19960222"><i class="fab fa-github w-5 text-center"></i></a>
+                                    <a target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" class="hover:text-blue-600 print:hidden" href="https://linkedin.com/in/tom19960222"><i class="fab fa-linkedin w-5 text-center"></i></a>
                                     <a class="flex items-center gap-2 hover:text-blue-600 print:text-gray-600 print:no-underline" href="https://yeekaros.net"><i class="fas fa-globe w-5 text-center"></i> <span class="break-all sm:break-normal">https://yeekaros.net</span></a>
                                 </div>
                             </div>
@@ -1413,8 +1464,7 @@
                             <!-- <div class="text-xs text-gray-500">· Innovative automotive payment solutions for seamless mobility</div> -->
                         </div>
                         <ul class="ml-5 list-disc space-y-1 text-gray-700">
-                            <li class="break-words">Maintained and improved an E-commerce platform, ensuring uptime and scalability.</li>
-                            <li class="break-words">Implemented a monitoring system with Prometheus/Grafana, integrated with Twilio API to trigger automated voice calls for critical failures, significantly reducing downtime.</li>
+                            <li class="break-words">Maintained and scaled an E-commerce platform with Prometheus/Grafana monitoring and phone-call alerts via Twilio to reduce downtime.</li>
                         </ul>
                         <div class="mt-2 flex flex-wrap gap-2"><span class="rounded bg-gray-200 px-2 py-0.5 text-xs">PHP</span><span class="rounded bg-gray-200 px-2 py-0.5 text-xs">Prometheus</span><span class="rounded bg-gray-200 px-2 py-0.5 text-xs">Grafana</span><span class="rounded bg-gray-200 px-2 py-0.5 text-xs">Twilio</span><span class="rounded bg-gray-200 px-2 py-0.5 text-xs">Jenkins</span></div>
                     </div>
@@ -1427,13 +1477,36 @@
                           <!-- <div class="text-xs text-gray-500">· Innovative automotive payment solutions for seamless mobility</div> -->
                       </div>
                       <ul class="ml-5 list-disc space-y-1 text-gray-700">
-                          <li class="break-words">Migrated a legacy system from Django to Angular.js + Node.js, ensuring dual-stack compatibility and preventing data drift during the transition.</li>
-                          <li class="break-words">Reduced infrastructure costs and improved reliability by moving workloads from Heroku to AWS ECS.</li>
-                          <li class="break-words">Implemented CI/CD pipelines with AWS CodePipeline + CodeBuild, automating build, test, and deployment processes.</li>
+                          <li class="break-words">Migrated the stack to Angular.js + Node.js, moved workloads from Heroku to AWS ECS, and implemented CI/CD with AWS CodePipeline and CodeBuild.</li>
                       </ul>
                       <div class="mt-2 flex flex-wrap gap-2"><span class="rounded bg-gray-200 px-2 py-0.5 text-xs">Django</span><span class="rounded bg-gray-200 px-2 py-0.5 text-xs">Node.js</span><span class="rounded bg-gray-200 px-2 py-0.5 text-xs">Heroku</span><span class="rounded bg-gray-200 px-2 py-0.5 text-xs">AWS CodePipeline</span><span class="rounded bg-gray-200 px-2 py-0.5 text-xs">AWS CodeBuild</span></div>
                   </div>
                   <div class="mb-4">
+                </section>
+                <section class="mb-8" aria-labelledby="homelab-heading">
+                    <h2 id="homelab-heading" class="mb-4 border-b-2 border-gray-300 text-xl font-bold">Homelab</h2>
+                    <div class="mb-4 hide-on-print">
+                        <a href="assets/images/homelab.png" target="_blank" rel="noopener noreferrer" class="block mt-2">
+                            <img src="assets/images/homelab.png" alt="Homelab Topology" class="w-full rounded border">
+                        </a>
+                    </div>
+                    <div>
+                        <div class="mb-4 p-4 rounded bg-gray-100">
+                            <h3 class="mb-2 text-base font-semibold">Compute and Storage Cluster</h3>
+                            <ul class="ml-5 list-disc space-y-1 text-gray-700">
+                                <li class="break-words">Built a 3-node Proxmox VE + Ceph cluster providing high-availability storage with over 100TB raw capacity; VMs support live migration across nodes.</li>
+                                <li class="break-words">Deployed a 3-node Kubernetes cluster with MetalLB as the load balancer and BGP peering to the core switch; installed GarageHQ S3-compatible storage and planned Prometheus + Thanos + Grafana Stack for observability.</li>
+                            </ul>
+                        </div>
+                        <div class="mb-4 p-4 rounded bg-gray-100">
+                            <h3 class="mb-2 text-base font-semibold">Network Topology and Interconnects</h3>
+                            <ul class="ml-5 list-disc space-y-1 text-gray-700">
+                                <li class="break-words">Each Proxmox node connects to the core switch (MikroTik CRS317) with 2x 10G fiber links; a dedicated subnet is used for the Ceph cluster network.</li>
+                                <li class="break-words">Core router is MikroTik CCR1009; interconnected with a second homelab over GRE over IPsec, using OSPF to exchange routes across both LANs.</li>
+                                <li class="break-words">Using AS38852 to peer at STUIX and with Cloudflare; also receiving full Internet routes from Vultr and announcing an owned /24 for use.</li>
+                            </ul>
+                        </div>
+                    </div>
                 </section>
                 <!-- <section class="mb-8" aria-labelledby="projects-heading">
                     <h2 id="projects-heading" class="mb-4 border-b-2 border-gray-300 text-xl font-bold">Projects</h2>
@@ -1479,7 +1552,7 @@
                     <h2 id="skills-heading" class="mb-4 border-b-2 border-gray-300 text-xl font-bold">Skills</h2>
                     <div class="mb-4 last:mb-0">
                         <h3 class="mb-2 text-base font-semibold">Languages</h3>
-                        <div class="flex flex-wrap gap-2">
+                        <div class="flex flex-wrap gap-2 skill-chips">
                             <div class="flex items-center gap-1.5 rounded bg-gray-200 px-2 py-1 text-sm"><span>Chinese</span> <span class="text-xs text-gray-500">· Native</span></div>
                             <div class="flex items-center gap-1.5 rounded bg-gray-200 px-2 py-1 text-sm"><span>Taiwanese</span> <span class="text-xs text-gray-500">· Native</span></div>
                             <div class="flex items-center gap-1.5 rounded bg-gray-200 px-2 py-1 text-sm"><span>Japanese</span> <span class="text-xs text-gray-500">· Intermediate (JLPT N2)</span></div>
@@ -1488,7 +1561,7 @@
                     </div>
                     <div class="mb-4 last:mb-0">
                         <h3 class="mb-2 text-base font-semibold">Programming Languages</h3>
-                        <div class="flex flex-wrap gap-2">
+                        <div class="flex flex-wrap gap-2 skill-chips">
                             <div class="flex items-center gap-1.5 rounded bg-gray-200 px-2 py-1 text-sm"><span>JavaScript</span> <span class="text-xs text-gray-500">· 9+ years</span></div>
                             <div class="flex items-center gap-1.5 rounded bg-gray-200 px-2 py-1 text-sm"><span>TypeScript</span> <span class="text-xs text-gray-500">· 7+ years</span></div>
                             <div class="flex items-center gap-1.5 rounded bg-gray-200 px-2 py-1 text-sm"><span>Python</span> <span class="text-xs text-gray-500">· ~2 years</span></div>
@@ -1496,14 +1569,14 @@
                     </div>
                     <div class="mb-4 last:mb-0">
                         <h3 class="mb-2 text-base font-semibold">Infrastructure</h3>
-                        <div class="flex flex-wrap gap-2">
+                        <div class="flex flex-wrap gap-2 skill-chips">
                             <div class="flex items-center gap-1.5 rounded bg-gray-200 px-2 py-1 text-sm"><span>AWS</span> <span class="text-xs text-gray-500">· 8+ years</span></div>
                             <div class="flex items-center gap-1.5 rounded bg-gray-200 px-2 py-1 text-sm"><span>Docker</span> <span class="text-xs text-gray-500">· 10+ years</span></div>
                         </div>
                     </div>
                     <div class="mb-4 last:mb-0">
                         <h3 class="mb-2 text-base font-semibold">Observability</h3>
-                        <div class="flex flex-wrap gap-2">
+                        <div class="flex flex-wrap gap-2 skill-chips">
                           <div class="flex items-center gap-1.5 rounded bg-gray-200 px-2 py-1 text-sm"><span>Prometheus</span> <span class="text-xs text-gray-500">· 7+ years</span></div>
                             <div class="flex items-center gap-1.5 rounded bg-gray-200 px-2 py-1 text-sm"><span>Grafana</span> <span class="text-xs text-gray-500">· 7+ years</span></div>
                         </div>
